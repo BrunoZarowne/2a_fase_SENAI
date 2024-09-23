@@ -1,0 +1,98 @@
+.imagen_fundo{
+    position: relative;
+    bottom: 101px;
+    background-size: cover;
+    img{
+        margin-top: 5px;
+        width: 100%;
+        height: 100vh;
+    }
+    z-index: 10;
+}
+.navBarPagina{
+    border-bottom: 1px black solid;
+    position: relative;
+    top: 10px;
+
+    display: flex;
+    justify-content: space-around;
+
+    z-index: 12;
+    padding-bottom: 15px;
+    p{
+        border: 1px black solid;
+        background-color: #003049;
+        border-radius: 60px;
+        position: relative;
+        top: 30px;
+        height: 30px;
+        width: 115px;
+        text-align: center;
+        padding-top: 5px;
+        color: white;
+        font: bold;
+        font-size: 20px;
+        
+    }
+    img{
+        width: 80px;
+    }
+}
+.texto_donation{
+    position: relative;
+    width: fit-content;
+    left: 800px;
+    bottom: 560px;
+    z-index: 14;
+    h1{
+        font-size: 50px;
+        font: bold;
+    }
+    p{
+        font-size: 25px;
+        font: bold;
+    }
+}
+.div_site{
+    height: 100vh;
+}
+.botoes{
+    position:relative;
+    bottom: 500px;
+    left: 800px;
+    display: flex;
+    justify-content: space-around;
+    height: 30px;
+    width: 350px;
+    z-index: 14;
+    
+}
+.botao_cadastro{
+    border: 3px #EE4F7A solid;
+    border-radius: 20px;
+    background-color: white;
+    width: 130px;
+    height: 35px;
+    text-align: center;
+    padding-top: 5px;
+}
+.botao_cadastro:hover{
+    background-color: #EE4F7A;
+    color: white;
+}
+.botao_download{
+    border: 3px #EE4F7A solid;
+    border-radius: 20px;
+    background-color: #EE4F7A;
+    width: 130px;
+    height: 35px;
+    text-align: center;
+    padding-top: 5px;
+    color: white;
+}
+.botao_download:hover{
+    color: black;
+    background-color: white;
+    border: 3px white;
+}
+*{margin: 0; padding: 0;}
