@@ -1,0 +1,10 @@
+.imgLogoHome{
+    position: relative;
+    bottom: 40px;
+    img{
+        width: 800px;
+        position: relative;
+        left: 28%;
+        z-index: 10;
+    }
+}

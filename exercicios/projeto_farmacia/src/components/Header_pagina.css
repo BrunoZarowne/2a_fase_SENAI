@@ -1,0 +1,37 @@
+.promocoes_farmacia{
+    height: 50px;
+    background-color: #ce1f3a;
+    text-align: center;
+        h1{
+            width: 800px;
+            position: relative;
+            top: 5px;
+            left: 30%;
+            background-color: #e23e57;
+        }
+    
+}
+
+.headerPagina{
+    border-bottom: 2px black solid;
+    background-color: #ffffff;
+
+}
+
+.barraPesquisa{
+    border: 2px black solid;
+    border-radius: 5px;
+    width: 730px;
+    height: 35px;
+    position: relative;
+    bottom: 80px;
+    left: 32%;
+    img{
+        width: 30px;
+        position: relative;
+        top: 3px;
+        left: 700px;
+        z-index: 10;
+    }
+}
+*{margin: 0; padding: 0;}

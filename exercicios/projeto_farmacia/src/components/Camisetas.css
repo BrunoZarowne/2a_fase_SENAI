@@ -1,0 +1,37 @@
+.divCamisetas{
+    border: 1px black solid;
+    display: flex;
+    justify-content: space-around;
+    height: 500px;
+}
+.camisaUm{
+    border: 2px black solid;
+    height: 350px;
+    width: 400px;
+    margin-top: 50px;
+    img{
+        width: 400px;
+        height: 350px;
+    }
+    p{
+        position: relative;
+        left: 105%;
+        bottom: 85%;
+        font-size: 20px;
+    }
+}
+.camisaDois{
+    border: 2px black solid;
+    height: 350px;
+    margin-top: 50px;
+    img{
+        width: 450px;
+        height: 350px;
+    }
+    p{
+        position: relative;
+        right: 60%;
+        bottom: 100px;
+        font-size: 20px;
+    }
+}

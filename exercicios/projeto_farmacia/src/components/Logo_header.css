@@ -1,0 +1,19 @@
+.divImg{
+    width: fit-content;
+    position: relative;
+    left: 450px;
+}
+.logoFarmarcia{
+    width: 130px;
+    height: 115px;
+    background-color: unset;
+}
+.icone{
+    width: 80px;
+    height: 80px;
+    position: relative;
+    left: 800px;
+    bottom: 15px;
+    transform: rotateY(180deg);
+
+}
