@@ -14,6 +14,7 @@ function Atv_7_11() {
             anos++
         }
         setQntTempoVaiLevar(anos)
+        alert('vai levar ' + qntTempoVaiLevar + ' anos')
     }
   return (
     <div className='container_7_11'>
