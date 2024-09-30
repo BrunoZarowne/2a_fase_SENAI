@@ -1,11 +1,21 @@
+html{
+    height: 100%;
+}
+body{
+    margin: 0;
+    height: 100%;
+}
+.div_site{
+    height: 100%;
+    background-color: #4A80D4;
+}
 .imagen_fundo{
+    height: 101%;
     position: relative;
-    bottom: 101px;
-    background-size: cover;
+    bottom: 8%;
     img{
-        margin-top: 5px;
         width: 100%;
-        height: 100vh;
+        height: 101vh;
     }
     z-index: 10;
 }
@@ -18,48 +28,45 @@
     justify-content: space-around;
 
     z-index: 12;
-    padding-bottom: 15px;
-    p{
+    button{
         border: 1px black solid;
         background-color: #003049;
-        border-radius: 60px;
+        border-radius: 15px;
         position: relative;
-        top: 30px;
-        height: 30px;
-        width: 115px;
+        top: 15px;
+        height: 35px;
+        width: 150px;
         text-align: center;
-        padding-top: 5px;
         color: white;
         font: bold;
         font-size: 20px;
         
     }
     img{
-        width: 80px;
+        width: 90px;
+        height: 80px;
     }
 }
 .texto_donation{
     position: relative;
     width: fit-content;
-    left: 800px;
-    bottom: 560px;
+    left: 60%;
+    bottom: 80%;
     z-index: 14;
-    h1{
-        font-size: 50px;
+    label{
+        font-size: 70px;
         font: bold;
     }
     p{
-        font-size: 25px;
+        font-size: 40px;
         font: bold;
     }
 }
-.div_site{
-    height: 100vh;
-}
+
 .botoes{
     position:relative;
-    bottom: 500px;
-    left: 800px;
+    bottom: 75%;
+    left: 59%;
     display: flex;
     justify-content: space-around;
     height: 30px;
@@ -71,10 +78,9 @@
     border: 3px #EE4F7A solid;
     border-radius: 20px;
     background-color: white;
-    width: 130px;
-    height: 35px;
-    text-align: center;
-    padding-top: 5px;
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
 }
 .botao_cadastro:hover{
     background-color: #EE4F7A;
@@ -84,15 +90,15 @@
     border: 3px #EE4F7A solid;
     border-radius: 20px;
     background-color: #EE4F7A;
-    width: 130px;
-    height: 35px;
-    text-align: center;
-    padding-top: 5px;
+    width: 150px;
+    height: 40px;
     color: white;
+    font-size: 20px;
 }
 .botao_download:hover{
-    color: black;
+    border-color: white;
     background-color: white;
-    border: 3px white;
+    color: black;
 }
+
 *{margin: 0; padding: 0;}
