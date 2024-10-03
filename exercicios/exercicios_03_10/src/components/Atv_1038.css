@@ -1,0 +1,49 @@
+.divTabela{
+    border: 2px black solid;
+    width: 25%;
+    height: 250px;
+    position: relative;
+    left: 35%;
+    margin-top: 3%;
+    button{
+        border: 2px black solid;
+        border-radius: 5px;
+        background-color: white;
+        position: relative;
+        left: 40%;
+        margin-top: 5%;
+    }
+}
+.ptCimaTabela{
+    border-bottom: 3px black solid;
+    display: flex;
+    font-size: 30px;
+    justify-content: space-between;
+    margin: 10px;
+}
+.precosInfosValores{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.codItens{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    font-size: 20px;
+}
+.produtos{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-left: 25%;
+    font-size: 20px;
+}
+.valores{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    font-size: 20px;
+}

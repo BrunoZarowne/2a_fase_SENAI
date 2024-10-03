@@ -1,0 +1,42 @@
+.tabelasDDD_NMR{
+    border: 2px black solid;
+    width: 25%;
+    height: 300px;
+    position: relative;
+    left: 35%;
+    margin-top: 1%;
+    button{
+        border: 2px black solid;
+        border-radius: 5px;
+        background-color: white;
+        position: relative;
+        left: 35%;
+        margin-top: 8%;
+    }
+}
+.prtCima{
+    width: 450px;
+    margin-left: 5%;
+    font-size: 35px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3%;
+}
+.prtBaixo{
+    display: flex;
+}
+.DDD{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+}
+.destinatario{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    margin-right: 10px;
+}

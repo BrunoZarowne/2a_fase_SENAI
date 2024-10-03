@@ -1,0 +1,18 @@
+.notas{
+    border: 2px black solid;
+    width: 25%;
+    height: 100px;
+    position: relative;
+    left: 35%;
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+
+    button{
+        border: 2px black solid;
+        height: 50px;
+        margin-top: 5%;
+        background-color: white;
+    }
+
+}

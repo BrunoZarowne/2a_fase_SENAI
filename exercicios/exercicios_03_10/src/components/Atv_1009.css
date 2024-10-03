@@ -1,0 +1,20 @@
+.divPai{
+    border: 2px black solid;
+    width: 25%;
+    height: 100px;
+    position: relative;
+    left: 35%;
+    margin-top: 1%;
+    label{
+        border-bottom: 1px black solid;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+    }
+    button{
+        border: 2px black solid;
+        border-radius: 5px;
+        margin-left: 25%;
+        background-color: white;
+    }
+}
