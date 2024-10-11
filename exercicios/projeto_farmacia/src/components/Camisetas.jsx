@@ -10,7 +10,7 @@ function Camisetas() {
 
         <div className='camisaDois'>
             <img src="./farmarcia-camisetas.png" alt="" />
-            <p>Tendo nas cores cinzas ee pretas, <br />com os tamanhos sendo: P, M, G</p>
+            <p>Tendo nas cores cinzas e pretas, <br />com os tamanhos sendo: P, M, G</p>
         </div>
     </div>
   )
