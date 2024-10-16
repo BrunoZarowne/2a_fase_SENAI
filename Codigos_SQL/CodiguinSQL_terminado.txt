@@ -1,0 +1,49 @@
+CREATE TABLE Categoria (
+  IDCategoria Int PRIMARY KEY not null,
+  NomeCategoria Varchar(100) not null
+);
+
+INSERT INTO Categoria VALUES (001, 'Ação');
+INSERT INTO Categoria VALUES (002, 'Aventura');
+INSERT INTO Categoria VALUES (003, 'Conto de Fadas');
+INSERT INTO Categoria VALUES (004, 'Romance');
+INSERT INTO Categoria VALUES (005, 'Suspense');
+
+SELECT * FROM Categoria;
+SELECT NomeCategoria FROM Categoria
+
+CREATE TABLE Autores (
+  IDAutores Int PRIMARY KEY not null,
+  NomeAutor Varchar(100) not null
+);
+
+INSERT INTO Autores VALUES (001, 'João Marcos Pinto');
+INSERT INTO Autores VALUES (002, 'Rogério Ribeirão Matos');
+INSERT INTO Autores VALUES (003, 'Alexandre Pequenos');
+INSERT INTO Autores VALUES (004, 'Alberto Ademar Da Silva');
+INSERT INTO Autores VALUES (005, 'Henrique Nunes Flores');
+
+SELECT * FROM Autores;
+SELECT NomeAutor FROM Autores;
+
+CREATE TABLE Livro (
+  IDLivro Int PRIMARY KEY not null,
+  TituloLivro Varchar(100) not null,
+  SinopseLivro Varchar(1000) not null,
+  IDCategoria Int not null,
+  FOREIGN KEY(IDCategoria) REFERENCES Categoria (IDCategoria),
+  IDAutores Int not null,
+  FOREIGN KEY(IDAutores) REFERENCES Autores (IDAutores)
+);
+
+INSERT INTO Livro VALUES (001, 'Dandadan', 'blábláblá', 001, 001);
+INSERT INTO Livro VALUES (002, 'Harry Potter', 'um mlk bruxo', 003, 002);
+INSERT INTO Livro VALUES (003, 'Diário de um banana', 'historia de um caba ai', 002, 001);
+INSERT INTO Livro VALUES (004, 'Black Clover', 'historia de um mlk sem magia num mundo com magia', 002, 004);
+INSERT INTO Livro VALUES (005, 'Diário de Anne Frank', 'historia de uma meninca contada pelo diario dela', 005, 005);
+
+UPDATE Livro SET TituloLivro = 'Amongus' WHERE IDLivro = 005;
+
+DELETE FROM Livro WHERE IDLivro = 003;
+
+SELECT * FROM Livro
