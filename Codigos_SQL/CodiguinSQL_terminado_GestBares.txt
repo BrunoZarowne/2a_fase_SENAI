@@ -1,0 +1,65 @@
+CREATE TABLE Mesas (
+  IDMesa Int PRIMARY KEY not null,
+  N_Mesa Varchar(10) not null
+);
+
+INSERT INTO Mesas VALUES (001, 01);
+
+SELECT * FROM Mesas;
+
+CREATE TABLE Bares (
+  IDBar Int PRIMARY KEY not null,
+  NomeBar Varchar(100) not null,
+  EndBar Varchar(200) not null
+);
+
+INSERT INTO Bares VALUES (001, 'bar do zé', 'rua dos macacos');
+
+SELECT * FROM Bares;
+
+CREATE TABLE Mesas_Bares (
+  IDMesa Int not null,
+  FOREIGN KEY (IDMesa) REFERENCES Mesas (IDMesa),
+  IDBar Int not null,
+  FOREIGN KEY (IDBar) REFERENCES Bares (IDBar)
+);
+
+INSERT INTO Mesas_Bares VALUES (001, 001);
+
+SELECT * FROM Mesas_Bares;
+
+-- ///////////////////////////////////////////////////////////////
+
+CREATE TABLE Garçons (
+  IDGarçom Int PRIMARY KEY not null,
+  Nome_Garçom Varchar(100) not null,
+  Telefone_Garçom Varchar(14) not null,
+  CPF_Garçom Varchar(14) not null
+);
+
+INSERT INTO Garçons VALUES (001, 'Abner', '(11)11111-1111', '111.111.111-11');
+
+SELECT * FROM Garçons;
+
+CREATE TABLE Pedidos (
+  IDPedido Int PRIMARY KEY not null,
+  Pedido_Cliente Varchar(100) not null,
+  Nome_Cliente Varchar(100) not null,
+  IDMesa Int not null,
+  FOREIGN KEY(IDMesa) REFERENCES Mesas (IDMesa)
+);
+
+INSERT INTO Pedidos VALUES (001, 'batata frita e carne', 'ronaldinho', 001);
+
+SELECT * FROM Pedidos;
+
+CREATE TABLE Garçons_Pedidos (
+  IDGarçom Int not null,
+  FOREIGN KEY (IDGarçom) REFERENCES Garçons (IDGarçom),
+  IDPedido Int not null,
+  FOREIGN KEY (IDPedido) REFERENCES Pedidos (IDPedido)
+);
+
+INSERT INTO Garçons_Pedidos VALUES (001, 001);
+
+SELECT * FROM Garçons_Pedidos;

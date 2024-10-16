@@ -1,0 +1,63 @@
+CREATE TABLE Participante (
+  IDParticipante Int PRIMARY KEY not null,
+  Nome_Part Varchar(100) not null,
+  Telefone_Part Varchar(14) not null,
+  CPF_Part Varchar(14) not null,
+  Email_part Varchar(100) not null,
+  Idade_Part Int not null
+);
+
+INSERT INTO Participante VALUES (001, 'Leo Stronda', '(55)55555-5555', '555.555.555-55', 'Leo@stronda.com', 30);
+INSERT INTO Participante VALUES (002, 'Renan Play', '(22)22222-2222', '222.222.222-22', 'Renan@play.com', 25);
+
+SELECT * FROM Participante;
+
+CREATE TABLE Evento (
+  IDEvento Int PRIMARY KEY not null,
+  Nome_Local Varchar(100) not null,
+  End_Local Varchar(200) not null,
+  Horario_Abertura TIME not null,
+  Horario_Fechamento TIME not null
+);
+
+INSERT INTO Evento VALUES (001, 'Mansão Maromba', 'Rua dos marombas', '07:30:00', '20:00:00');
+INSERT INTO Evento VALUES (002, 'Mansão da Calvice', 'Rua dos Calvos', '08:00:00', '22:00:00');
+
+SELECT * FROM Evento;
+
+CREATE TABLE Participante_Evento (
+  IDParticipante Int not null,
+  FOREIGN KEY (IDParticipante) REFERENCES Participante (IDParticipante),
+  IDEvento Int not null,
+  FOREIGN KEY (IDEvento) REFERENCES Evento (IDEvento)
+);
+
+INSERT INTO Participante_Evento VALUES (001, 001);
+
+SELECT * FROM Participante_Evento;
+
+-- /////////////////////////////////////////////////////////////
+
+CREATE TABLE Palestrantes (
+  IDPalestrante Int PRIMARY KEY not null,
+  Nome_Pale Varchar(100) not null,
+  Telefone_Pale Varchar(14) not null,
+  CPF_Pale Varchar(14) not null,
+  Email_Pale Varchar(100) not null
+);
+
+INSERT INTO Palestrantes VALUES (001, 'Giga', '(44)44444-4444', '444.444.444-44', 'Giga@bigGiga.com');
+INSERT INTO Palestrantes VALUES (002, 'Luan', '(88)88888-888', '888.888.888-88', 'Luan@gameplay.com');
+
+SELECT * FROM Palestrantes;
+
+CREATE TABLE Evento_Palestrante (
+  IDPalestrante Int not null,
+  FOREIGN KEY (IDPalestrante) REFERENCES Palestrantes (IDPalestrante),
+  IDEvento Int not null,
+  FOREIGN KEY (IDEvento) REFERENCES Evento (IDEvento)
+);
+
+INSERT INTO Evento_Palestrante VALUES (001, 001);
+
+SELECT * FROM Evento_Palestrante;
