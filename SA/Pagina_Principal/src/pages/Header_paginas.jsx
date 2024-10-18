@@ -6,6 +6,10 @@ function Header_paginas() {
     <div className='divHeaderPage'>
       <div className='imgsNavBar'>
         <img className='sapo' src="./logo_sapo.png" alt="" />
+        <div className='txtNavBar'>
+          <label className='txt1'>Seja bem vindo ao nosso mundo literario onde cada pagina</label><br />
+          <label className='txt2'> e uma nova aventura esperando para ser  descoberta</label>
+        </div>
         <img className='user' src="./img_usuario.png" alt="" />
       </div>
       <div className='buttonsNav'>

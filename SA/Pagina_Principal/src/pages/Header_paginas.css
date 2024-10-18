@@ -17,6 +17,17 @@
         padding-top: 0.8%;
         padding-right: 1%;
     }
+    
+}
+.txtNavBar{
+    color: white;
+    font-size: 25px;
+    margin-top: 1%;
+    .txt2{
+        position: relative;
+        left: 5%;
+    }
+    
 }
 .buttonsNav{
     border-top: 2px white solid;
