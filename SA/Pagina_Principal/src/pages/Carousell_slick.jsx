@@ -5,28 +5,53 @@ import "slick-carousel/slick/slick-theme.css";
 import './Carousell_slick.css'
 import { Link } from 'react-router-dom';
 
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "red", border: "1px green solid" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "green" }}
+      onClick={onClick}
+    />
+  );
+}
+
 function Carousell_slick() {
     const images = ['./ONE.png', './MHA.png', './ONP.png', './MOB.png', './KAGU.png', './berserk.png'];
     
       const settings = {
-        dots: true, // Adiciona os pontinhos de navegação
+        dots: false, // Adiciona os pontinhos de navegação
         infinite: true, // Loop infinito no carrossel
         speed: 500,
-        slidesToShow: 5,
+        slidesToShow: 3,
         slidesToScroll: 2,
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />
       };
     
   return (
     <div>
       <Slider {...settings}>
         {images.map((image, index) => (
-          <div key={index}>
+          <div className='divCarousel' key={index}>
            {/* <Link to=""> */}
             <img src={image} alt={`Slide ${index + 1}`} />
            {/* </Link>     */}
           </div>
         ))}
       </Slider>
+      
     </div>
   )
 }
