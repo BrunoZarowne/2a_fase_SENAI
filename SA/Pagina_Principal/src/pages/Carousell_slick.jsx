@@ -27,14 +27,18 @@ function SamplePrevArrow(props) {
   );
 }
 
+function adcObj() {
+  alert('aaaa')
+}
 function Carousell_slick() {
+    const obj1 = {nome: 'mob', img: 'https://m.media-amazon.com/images/I/91QPDVbQDvL._AC_UF1000,1000_QL80_.jpg', id:1}
     const images = ['./ONE.png', './MHA.png', './ONP.png', './MOB.png', './KAGU.png', './berserk.png'];
     
       const settings = {
         dots: false, // Adiciona os pontinhos de navegação
         infinite: true, // Loop infinito no carrossel
         speed: 500,
-        slidesToShow: 3,
+        slidesToShow: 5,
         slidesToScroll: 2,
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />
@@ -51,7 +55,7 @@ function Carousell_slick() {
           </div>
         ))}
       </Slider>
-      
+      <button onClick={adcObj}>aaa</button>
     </div>
   )
 }
