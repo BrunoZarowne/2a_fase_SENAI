@@ -1,0 +1,23 @@
+.containerObraBase{
+    background-color: #00002D;
+}
+.parte_cima{
+    display: flex;
+}
+.img_desc_obra{
+    border: 2px red solid;
+    label{
+        font-size: 35px;
+        color: white;
+    }
+}
+.sinopse_genero{
+    font-size: 35px;
+    color: white;
+}
+.caixaSinopse{
+    border: 2px red solid;
+    background-color: #0F0F4E;
+    color: white;
+    font-size: 15px;
+    }

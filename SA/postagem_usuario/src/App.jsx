@@ -1,14 +1,14 @@
-import { useState } from 'react'
 import './App.css'
 import Pagina_postagem from './components/Pagina_postagem'
+import Pagina_obra_base from './components/Pagina_obra_base'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <div>
-        <Pagina_postagem />
+        {/* <Pagina_postagem /> */}
+        <Pagina_obra_base />
       </div>
     </>
   )

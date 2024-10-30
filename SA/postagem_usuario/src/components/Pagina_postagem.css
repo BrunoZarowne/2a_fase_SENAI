@@ -35,6 +35,28 @@
         left: 20%;
         top: 35%;
     }
+    
+}
+
+.labelInput{
+    input{
+        position: fixed;
+        top: -1000px;
+    }
+    .pMais{
+        width: fit-content;
+        position: relative;
+        left: 25%;
+        align-items: center;
+        font-size: 70px;
+    }
+    .pTxt{
+        width: fit-content;
+        position: relative;
+        right: 7%;
+        bottom: 5%;
+        text-align: center;
+    }
 }
 
 .labelTxt{
