@@ -14,16 +14,9 @@ function Pagina_postagem() {
       images: ""
     })
     
-    const [book, setBook] = useState([])
-
-    const handleSubmit = (e) => {
-          e.preventDefault();
-      
-          setBook([...book, { id: book.length + 1, ...formState }]);
-        };
     
   function guardar_infos_postagem() {
-
+      
       console.log(formState)
   }
   return (
@@ -114,7 +107,7 @@ function Pagina_postagem() {
             setFormState({...formState, summary: e.target.value})}></textarea>
             <br /><br />
             
-          <button type="submit" onChange={handleSubmit} onClick={guardar_infos_postagem}>Postar</button>
+          <button type="submit" onClick={guardar_infos_postagem}>Postar</button>
         </div>
       </div>
     </div>
