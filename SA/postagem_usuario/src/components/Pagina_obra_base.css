@@ -11,11 +11,10 @@
     left: 10%;
     top: 56px;
     label{
-        font-size: 50px;
+        font-size: 80px;
         color: white;
     }
     img{
-        padding-top: 5%;
         width: 450px;
         height: 600px;
     }
@@ -25,8 +24,19 @@
     color: white;
     position: relative;
     height: fit-content;
-    top: 335px;
+    top: 280px;
     left: 15%;
+    button{
+        border: 2px white solid;
+        border-radius: 5px;
+        width: 450px;
+        height: 40px;
+        background-color: #00002D;
+        color: white;
+        font-size: 30px;
+        position: relative;
+        left: 28%;
+    }
 }
 .caixaSinopse{
     background-color: #0F0F4E;
@@ -36,27 +46,29 @@
 .txtSinopse{
     position: relative;
     bottom: 20px;
-}
-.inserirGeneros{
-    font-size: 15px;
-    position: relative;
-    left: 50%;
-    bottom: 10px;
+    font-size: 50px;
 }
 .txtGeneros{
-    font-size: 15px;
+    font-size: 20px;
     position: relative;
-    left: 50%;
+    left: 40%;
     bottom: 10px;
 }
-.parteMeio{
-    padding-top: 5%;
-}
-.areaAutor{
-    border: 2px red solid;
-    color: white;
-    width: 50%;
-    height: 150px;
+.inserirGeneros{
+    font-size: 20px;
     position: relative;
-    left: 10%;
+    left: 40%;
+    bottom: 10px;
+}
+.txtAutor{
+    font-size: 25px;
+    position: relative;
+    left: 55%;
+    bottom: 35px;
+}
+.inserirAutor{
+    font-size: 25px;
+    position: relative;
+    left: 55%;
+    bottom: 35px;
 }

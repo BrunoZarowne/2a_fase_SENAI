@@ -1,9 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Pagina_obra_base.css'
 
 function Pagina_obra_base() {
-
- 
   return (
       <div className='containerObraBase'>
         <div className='parte_cima'>
@@ -13,15 +11,13 @@ function Pagina_obra_base() {
             </div>
             <div className='sinopse_genero'>
                 <label className='txtSinopse'>Sinopse</label>
+                <label className='txtAutor'>Autor: </label>
+                <label className='inserirAutor'>a</label>
                 <label className='txtGeneros'>Generos: </label>
                 <label className='inserirGeneros'>a</label><br />
-                <textarea className='caixaSinopse' cols="120" rows="20" readOnly disabled></textarea>
+                <textarea className='caixaSinopse' cols="120" rows="20" readOnly disabled></textarea><br />
+                <button>Ler</button>
             </div>
-        </div>
-        <div className='parteMeio'>
-          <div className='areaAutor'>
-                <label>aaaa</label>
-              </div>
         </div>
     </div>
   )
