@@ -4,30 +4,32 @@ import './Comentarios.css'
 const Comentarios = () => {
   const [comentarios, setComenarios] = useState([]);
   const [novoComentario, setNovoComentario] = useState('');
+  const [nComentarios, setNComentarios] = useState(0);
 
   const Postar = () => {
     if (novoComentario.trim()) {
       setComenarios([...comentarios, novoComentario]);
       setNovoComentario('');
+      setNComentarios(nComentarios + 1)
     }
   };
 
   return (
     <div className='contComentarios'>
-      <h1>Please add your comment</h1>
-      <div id="containerComentarios">
-        {comentarios.map((comentarios, index) => (
-          <p className='s' key={index}>{comentarios}</p>
-        ))}
-      </div>
+      <label>{nComentarios} Comentários</label><br />
       <textarea
         value={novoComentario}
         onChange={(e) => setNovoComentario(e.target.value)}
-        cols="60"
-        rows="5"
+        cols="80"
+        rows="4"
       />
       <br />
-      <button onClick={Postar}>Post</button>
+      <button onClick={Postar}>Postar</button>
+      <div id="containerComentarios">
+        {comentarios.map((comentarios, index) => (
+          <p className='comentarios' key={index}>"User"<br/>{comentarios}</p>
+        ))}
+      </div>
     </div>
   );
 };

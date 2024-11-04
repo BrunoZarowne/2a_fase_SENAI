@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import Comentarios from './Comentarios'
 import './Pagina_obra_base.css'
 
 function Pagina_obra_base() {
@@ -19,6 +19,7 @@ function Pagina_obra_base() {
                 <button>Ler</button>
             </div>
         </div>
+      <Comentarios />
     </div>
   )
 }

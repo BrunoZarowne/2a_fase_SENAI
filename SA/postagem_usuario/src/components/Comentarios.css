@@ -1,6 +1,60 @@
-.a{
-    border: 1px red solid;
+body{
+    background-color: #00002D;
 }
-.s{
-    font-size: 20px;
+.contComentarios{
+    border: 2px #0F0F4E solid;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #0F0F4E;
+    width: 50%;
+    position: relative;
+    top: 15%;
+    left: 20%;
+    color: white;
+    label{
+        color: white;
+        font-size: 40px;
+        position: relative;
+        bottom: 55px;
+    }
+    textarea{
+        border: 2px #16164D solid;
+        border-radius: 5px;
+        background-color: #16164D;
+        width: 70%;
+        position: relative;
+        bottom: 30px;
+        left: 1%;
+        color: white;
+        font-size: 18px;
+        resize: none;
+        outline: none;
+    }
+    button{
+        border: 2px white solid;
+        border-bottom-right-radius: 5px;
+        position: relative;
+        bottom: 60px;
+        left: 65%;
+        font-size: 20px;
+        width: 60px;
+        background-color: white;
+        transition: 0.3s;
+    }
+    button:hover{
+        border: 2px black solid;
+        color: white;
+        background-color: black;
+    }
+}
+.comentarios{
+    border: 2px red solid;
+    width: fit-content;
+    position: relative;
+    bottom: 35px;
+    left: 1%;
+    font-size: 25px;
+}
+.containerComentarios{
+    border: 2px red solid;
 }
