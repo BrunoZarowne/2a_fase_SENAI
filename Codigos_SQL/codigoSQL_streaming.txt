@@ -1,0 +1,41 @@
+CREATE TABLE Usuario (
+  IDUsuario Int PRIMARY KEY NOT NULL,
+  NomeUsuario VARCHAR(100) NOT NULL,
+  EmailUsuario VARCHAR(200) NOT NULL,
+  SenhaUsuario VARCHAR(100) NOT NULL,
+  DATA_NASCIMENTO DATE NOT NULL,
+  DATA_CADASTRO DATE NOT NULL
+);
+
+INSERT INTO Usuario VALUES (001, 'Bruno', 'bruno@gmail.com', 'bruno2143', '09/09/2006', '18/05/2024');
+INSERT INTO Usuario VALUES (002, 'João', 'joão@gmail.com', 'joão1234', '25/04/2005', '16/07/2024');
+INSERT INTO Usuario VALUES (003, 'José', 'josé@gmail.com', 'josé4321', '02/12/2007', '30/06/2024');
+INSERT INTO Usuario VALUES (004, 'Arthur', 'arthur@gmail.com', 'arthur2314', '25/01/2005', '19/07/2024');
+
+CREATE TABLE Video (
+  IDVideo Int PRIMARY KEY NOT NULL,
+  TituloVideo VARCHAR(200) NOT NULL,
+  DescricaoVideo VARCHAR(100) NOT NULL,
+  Data_Upload DATE NOT NULL,
+  FOREIGN KEY (IDCategoria) REFERENCES Categoria (IDCategoria)
+)
+
+INSERT INTO Video (001, 'Clipes da calvoesfera', 'clipes de youtubers dentro da calvoesfera', '16/01/1998', 001);
+INSERT INTO Video (002, 'Clipes de jogadas de streamers', 'clipes das melhores plays dos streamers', '25/08/2018', 002);
+INSERT INTO Video (003, 'Explicando a speedrun de dark soul', 'explicando como foi feita a speedrun de dark souls', '20/05/2020', 003);
+INSERT INTO Video (004, 'Como jogar de volibear na nova season', 'explicação de runas, builds e matchups para volibear', '20/10/2024', 004);
+INSERT INTO Video (005, 'Como fazer um bolo de laranja em 30 minutos', 'receita simples e rapida de como fazer um bolo de laranja', '01/11/2024', 005);
+INSERT INTO Video (006, 'Como fazer frango a parmegiana', 'receita simples e rapida para fazer uma parmegiana na sua casa', '20/10/2024', 006);
+INSERT INTO Video (007, 'Top 5 jogos de ação para se jogar em 2024', 'lista com 5 jogos excelentes para voce jogar em 2024', '26/11/2023', 007);
+INSERT INTO Video (008, 'Os melhores filmes de terror de 2024', 'indicações de filmes de terror, para que voce possa ver', '20/10/2024', 008);
+
+CREATE TABLE Playlist (
+  IDPlaylist Int PRIMARY KEY NOT NULL,
+  NomePlaylist VARCHAR(100) NOT NULL,
+  FOREIGN KEY (IDUsuario) REFERENCES Usuario (IDUsuario)
+)
+
+INSERT INTO Playlist VALUES (001, 'Clipes', 001);
+INSERT INTO Playlist VALUES (002, 'Tutoriais/explicações', 002);
+INSERT INTO Playlist VALUES (003, 'Receitas', 003);
+INSERT INTO Playlist VALUES (004, 'Indicações', 004);
