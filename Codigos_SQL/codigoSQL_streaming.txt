@@ -7,35 +7,90 @@ CREATE TABLE Usuario (
   DATA_CADASTRO DATE NOT NULL
 );
 
-INSERT INTO Usuario VALUES (001, 'Bruno', 'bruno@gmail.com', 'bruno2143', '09/09/2006', '18/05/2024');
-INSERT INTO Usuario VALUES (002, 'João', 'joão@gmail.com', 'joão1234', '25/04/2005', '16/07/2024');
-INSERT INTO Usuario VALUES (003, 'José', 'josé@gmail.com', 'josé4321', '02/12/2007', '30/06/2024');
-INSERT INTO Usuario VALUES (004, 'Arthur', 'arthur@gmail.com', 'arthur2314', '25/01/2005', '19/07/2024');
+INSERT INTO Usuario VALUES (001, 'Bruno', 'bruno@gmail.com', 'bruno2143', '2006/09/09', '2024/05/18');
+INSERT INTO Usuario VALUES (002, 'João', 'joão@gmail.com', 'joão1234', '2005/04/06', '2024/04/16');
+INSERT INTO Usuario VALUES (003, 'José', 'josé@gmail.com', 'josé4321', '2007/12/02', '2024/06/30');
+INSERT INTO Usuario VALUES (004, 'Arthur', 'arthur@gmail.com', 'arthur2314', '2005/01/05', '2024/07/04');
+
+CREATE TABLE Categoria (
+  IDCategoria Int PRIMARY KEY NOT NULL,
+  NomeCategoria VARCHAR(100) NOT NULL
+);
+
+INSERT INTO Categoria VALUES (001, 'diversão');
+INSERT INTO Categoria VALUES (002, 'tutorial');
+INSERT INTO Categoria VALUES (003, 'receita');
+INSERT INTO Categoria VALUES (004, 'indicação');
 
 CREATE TABLE Video (
   IDVideo Int PRIMARY KEY NOT NULL,
   TituloVideo VARCHAR(200) NOT NULL,
   DescricaoVideo VARCHAR(100) NOT NULL,
   Data_Upload DATE NOT NULL,
+  IDCategoria Int NOT NULL,
   FOREIGN KEY (IDCategoria) REFERENCES Categoria (IDCategoria)
-)
+);
 
-INSERT INTO Video (001, 'Clipes da calvoesfera', 'clipes de youtubers dentro da calvoesfera', '16/01/1998', 001);
-INSERT INTO Video (002, 'Clipes de jogadas de streamers', 'clipes das melhores plays dos streamers', '25/08/2018', 002);
-INSERT INTO Video (003, 'Explicando a speedrun de dark soul', 'explicando como foi feita a speedrun de dark souls', '20/05/2020', 003);
-INSERT INTO Video (004, 'Como jogar de volibear na nova season', 'explicação de runas, builds e matchups para volibear', '20/10/2024', 004);
-INSERT INTO Video (005, 'Como fazer um bolo de laranja em 30 minutos', 'receita simples e rapida de como fazer um bolo de laranja', '01/11/2024', 005);
-INSERT INTO Video (006, 'Como fazer frango a parmegiana', 'receita simples e rapida para fazer uma parmegiana na sua casa', '20/10/2024', 006);
-INSERT INTO Video (007, 'Top 5 jogos de ação para se jogar em 2024', 'lista com 5 jogos excelentes para voce jogar em 2024', '26/11/2023', 007);
-INSERT INTO Video (008, 'Os melhores filmes de terror de 2024', 'indicações de filmes de terror, para que voce possa ver', '20/10/2024', 008);
+INSERT INTO Video VALUES (001, 'Clipes da calvoesfera', 'clipes de youtubers dentro da calvoesfera', '1998/01/16', 001);
+INSERT INTO Video VALUES (002, 'Como jogar de volibear na nova season', 'explicação de runas, builds e matchups para volibear', '2024/10/20', 002);
+INSERT INTO Video VALUES (003, 'Como fazer um bolo de laranja em 30 minutos', 'receita simples e rapida de como fazer um bolo de laranja', '2024/01/11', 003);
+INSERT INTO Video VALUES (004, 'Os melhores filmes de terror de 2024', 'indicações de filmes de terror, para que voce possa ver', '2024/05/02', 004);
+
+CREATE TABLE Video_Categoria (
+  IDVideo Int PRIMARY KEY NOT NULL,
+  FOREIGN KEY (IDVideo) REFERENCES Video (IDVideo),
+  IDCategoria Int NOT NULL,
+  FOREIGN KEY (IDCategoria) REFERENCES Categoria (IDCategoria)
+);
+
 
 CREATE TABLE Playlist (
   IDPlaylist Int PRIMARY KEY NOT NULL,
   NomePlaylist VARCHAR(100) NOT NULL,
+  IDUsuario Int NOT NULL,
   FOREIGN KEY (IDUsuario) REFERENCES Usuario (IDUsuario)
-)
+);
+
 
 INSERT INTO Playlist VALUES (001, 'Clipes', 001);
 INSERT INTO Playlist VALUES (002, 'Tutoriais/explicações', 002);
 INSERT INTO Playlist VALUES (003, 'Receitas', 003);
 INSERT INTO Playlist VALUES (004, 'Indicações', 004);
+
+
+CREATE TABLE Comentario (
+  IDComentario Int PRIMARY KEY NOT NULL,
+  Comentario VARCHAR(200) NOT NULL,
+  Data_comentario DATE NOT NULL,
+  IDUsuario Int NOT NULL,
+  FOREIGN KEY (IDUsuario) REFERENCES Usuario (IDUsuario),
+  IDVideo Int NOT NULL,
+  FOREIGN KEY (IDVideo) REFERENCES Video (IDVideo)
+);
+
+INSERT INTO Comentario VALUES (001, 'muito foda esse video slk', '2023/12/10', 001, 001);
+INSERT INTO Comentario VALUES (002, 'tirou todas as minhas duvidas sobre o volibear nessa season', '2024/10/12', 002, 002);
+INSERT INTO Comentario VALUES (003, 'o bolo ficou muito bom todo mundo adorou', '2023/05/15', 003, 003);
+INSERT INTO Comentario VALUES (004, 'esse filmes parecem todos muitos bom, obrigado pela dica', '2023/06/09', 004, 004);
+
+CREATE TABLE Avaliacoes (
+  IDAvaliacao Int PRIMARY KEY NOT null,
+  Nota DECIMAL(2) NOT NULL,
+  Data_avaliacao DATE NOT NULL,
+  IDUsuario Int NOT NULL,
+  FOREIGN KEY (IDUsuario) REFERENCES Usuario (IDUsuario),
+  IDVideo Int NOT NULL,
+  FOREIGN KEY (IDVideo) REFERENCES Video (IDVideo)
+);
+
+INSERT INTO Avaliacoes VALUES (001, '4.5', '2023/06/19', 001, 001);
+INSERT INTO Avaliacoes VALUES (002, '5.0', '2024/03/09', 002, 002);
+INSERT INTO Avaliacoes VALUES (003, '4.8', '2023/08/19', 003, 003);
+INSERT INTO Avaliacoes VALUES (004, '4.3', '2023/05/02', 004, 004);
+
+
+-- SELECT * FROM Video ORDER BY TituloVideo
+
+SELECT * FROM Playlist WHERE IDUsuario = 1 ORDER BY NomePlaylist;
+
+SELECT * FROM Comentario WHERE IDUsuario = 1
