@@ -17,7 +17,7 @@ function Pagina_postagem() {
     
   function guardar_infos_postagem() {
       
-      console.log(formState)
+      console.log(formState.title)
   }
   return (
     <div className='containerPostagem'>

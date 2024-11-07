@@ -1,6 +1,5 @@
 import React from 'react'
 import './Pagina_principal.css'
-import Carousell_slick from './Carousell_slick'
 
 function Pagina_principal() {
   return (
@@ -14,7 +13,6 @@ function Pagina_principal() {
         <img src="./ONE.png" alt="" />
       </div> */}
       <div>
-        <Carousell_slick />
       </div>
     </div>
   )
