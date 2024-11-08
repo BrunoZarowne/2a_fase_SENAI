@@ -1,6 +1,7 @@
 import { useState } from 'react'
-import Pagina_principal from './pages/Pagina_principal'
-import Header_paginas from './pages/Header_paginas'
+import Pagina_principal from './components/Pagina_principal'
+import Header_paginas from './components/Header_paginas'
+import Carousel from './Carousel.jsx'
 import './App.css'
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <div>
         <Header_paginas /><br/><br/>
         <Pagina_principal />
+        <Carousel />
       </div>
     </>
   )

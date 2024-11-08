@@ -1,8 +1,31 @@
 .containerCarousel{
-    border: 2px red solid;
-    width: 80%;
+    border: 2px #0C0C3E solid;
+    border-radius: 10px;
+    width: 90%;
+    height: 450px;
+    background-color: #0C0C3E;
+    position: relative;
+    left: 10%;
+    --swiper-pagination-bullet-inactive-color: #FFF;
+    label{
+        position: relative;
+        left: 50px;
+        color: white;
+        font-size: 25px;
+    }
 }
-.abogus{
-    width: 500px;
-    height: 500px;
+.imgs{
+    border: 2px red solid;
+    border-radius: 5px;
+    width: 250px;
+    height: 350px;
+    position: relative;
+    left: 45px;
+}
+
+.swiper-button-next{
+    --swiper-theme-color: #FFF;
+}
+.swiper-button-prev{
+    --swiper-theme-color: #FFF;
 }
