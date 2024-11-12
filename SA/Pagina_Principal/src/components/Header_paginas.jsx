@@ -17,7 +17,6 @@ function Header_paginas() {
         <a href=""><button className='bt2'>Lançamentos</button></a>
         <a href=""><button className='bt3'>Populares</button></a>
         <a href=""><button className='bt4'>Melhores Avaliados</button></a>
-        <a href=""><button className='bt5'>Updates</button></a>
       </div>
     </div>
   )

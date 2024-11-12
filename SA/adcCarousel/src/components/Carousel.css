@@ -5,7 +5,7 @@
     height: 450px;
     background-color: #0C0C3E;
     position: relative;
-    left: 10%;
+    left: 5%;
     --swiper-pagination-bullet-inactive-color: #FFF;
     label{
         position: relative;
