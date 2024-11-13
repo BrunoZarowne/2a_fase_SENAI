@@ -14,8 +14,21 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 
 
-
 function Carousel() { 
+
+  const [formState, setFormState] = useState({
+      title: "",
+      subtitle: "",
+      author: "",
+      pages: "",
+      date: "",
+      summary: "",
+      images: "",
+      genre: ""
+    })
+
+    
+
   const [imagensObrasFrutas, setImagensObrasFrutas] = useState([
     {id: '1',
     a: 'https://stackoverflow.com/questions/65590148/swiperjs-how-do-you-style-the-pagination-bullets', 
@@ -48,17 +61,20 @@ function Carousel() {
   }
   function fecharModal() {
     setIsOpen(false)
+    
   }
   function adcImagens() {
     abrirModal()
-    // let genero = prompt('digite um genero')
+    
+  }
 
-    if (genero == 'frutas'){
+  function guardar_infos_postagem() {
+    if (formState.genre == "frutas"){
       setImagensObrasFrutas((imagensObrasFrutas) => 
       [...imagensObrasFrutas, 
-      {id: imagensObrasFrutas.length + 1, image: 'https://revistacampoenegocios.com.br/wp-content/uploads/2020/09/Foto-02-2.jpg', titulo: 'manga', genero: 'ação'}])
+      {id: imagensObrasFrutas.length + 1, image: 'https://revistacampoenegocios.com.br/wp-content/uploads/2020/09/Foto-02-2.jpg', titulo: 'manga', genero: 'frutas'}])
       console.log(imagensObrasFrutas)
-    }else if( genero == 'acao'){
+    }else if( formState.genre == "acao"){
       setImagensObrasacao((imagensObrasAcao) => 
     [...imagensObrasAcao, 
     {id: imagensObrasAcao.length + 1, image: './2.jpg', titulo: 'manga', genero: 'ação'}])
@@ -103,9 +119,90 @@ function Carousel() {
       isOpen={modalIsOpen}
       onRequestClose={fecharModal}
       contentLabel='Modal de exemplo'
+      ariaHideApp={false}
       >
-        <h1>aaaaaaaaaaaaa</h1>
-        <button onClick={fecharModal}>X</button>
+      
+        
+        <div className='infosObra'>
+          <div className='inputsUm'>
+            <label>Link da sua imagen</label><br />
+            <input 
+            type="text" 
+            required 
+            value={formState.images} 
+            onChange={(e) => 
+            setFormState({...formState, images: e.target.value})}/>
+            <br /><br /><br /><br />
+            
+            <label>Titulo</label><br />
+            <input 
+            type="text" 
+            required 
+            value={formState.title} 
+            onChange={(e) => 
+            setFormState({...formState, title: e.target.value})}/>
+            <br /><br /><br /><br />
+
+            <label>Subtitulo</label><br />
+            <input type="text" 
+            required 
+            value={formState.subtitle} 
+            onChange={(e) => 
+            setFormState({...formState, subtitle: e.target.value})}/>
+            <br /><br /><br /><br />
+
+            <label>Nome do Autor</label><br />
+            <input 
+            type="text" 
+            required 
+            value={formState.author} 
+            onChange={(e) => 
+            setFormState({...formState, author: e.target.value})}/>
+            <br /><br /><br /><br />
+
+            <label>Gênero</label><br />
+            <input 
+            type="text" 
+            required 
+            value={formState.genre} 
+            onChange={(e) => 
+            setFormState({...formState, genre: e.target.value})}/>
+            <br /><br /><br /><br />
+
+            <label>Numero de paginas</label><br />
+            <input 
+            className='inputMenor' 
+            type="number" 
+            required 
+            value={formState.pages} 
+            onChange={(e) => 
+            setFormState({...formState, pages: e.target.value})}/>
+            <br /><br /><br />
+            
+            <label>Data lançamento</label><br />
+            <input 
+            className='inputMenor' 
+            type="date" 
+            required 
+            value={formState.date} 
+            onChange={(e) => 
+            setFormState({...formState, date: e.target.value})}/>
+          </div>
+            <div className='caixaSinopse'>
+                <label>Sinopse</label><br />
+                <textarea 
+                name="" 
+                id="" 
+                cols="55" 
+                rows="27" 
+                required 
+                value={formState.summary} 
+                onChange={(e) => 
+                setFormState({...formState, summary: e.target.value})}></textarea><br /><br />
+                <button type="submit" onClick={guardar_infos_postagem}>Postar</button>
+            </div>
+        </div>
+        <button onClick={fecharModal}><img src="./fechar_modal.svg"/></button>
       </Modal>
     </div>
   )

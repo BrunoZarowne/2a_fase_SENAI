@@ -6,6 +6,7 @@
     background-color: #0C0C3E;
     position: relative;
     left: 5%;
+    z-index: 0;
     --swiper-pagination-bullet-inactive-color: #FFF;
     label{
         position: relative;
@@ -28,4 +29,50 @@
 }
 .swiper-button-prev{
     --swiper-theme-color: #FFF;
+}
+.modalPostagem{
+    background-color: #212277;
+    width: 50%;
+    height: 80%;
+    position: relative;
+    left: 25%;
+    top: 10%;
+    button{
+        border: none;
+        width: 50px;
+        height: 50px;
+        background-color: #0E1065;
+        box-shadow: none;
+    }
+}
+
+.inputsUm{
+    position: relative;
+    left: 10%;
+    top: 50px;
+    width: 40%;
+    /* border: 2px green solid; */
+    label{
+        color: white;
+    }
+    input{
+        width: 300px;
+        height: 20px;
+    }
+}
+.caixaSinopse{
+    /* border: 2px blue solid; */
+    width: 50%;
+    position: relative;
+    left: 50%;
+    bottom: 500px;
+    color: white;
+    button{
+        border-radius: 5px;
+        position: relative;
+        left: 13%;
+        width: 300px;
+        height: 30px;
+        color: white;
+    }
 }
