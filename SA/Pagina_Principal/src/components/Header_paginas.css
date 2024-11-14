@@ -6,6 +6,7 @@
 .imgsNavBar{
     display: flex;
     justify-content: space-between;
+    border-bottom: 2px white solid;
     .sapo{
         height: 100px;
         width: 120px;
@@ -30,8 +31,8 @@
     
 }
 .buttonsNav{
-    width: 80%;
-    border-top: 2px white solid;
+    width: 83%;
+    /* border-top: 2px white solid; */
     display: flex;
     justify-content: space-around;
     padding: 5px;

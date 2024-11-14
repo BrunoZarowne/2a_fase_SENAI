@@ -49,7 +49,7 @@ body{
 }
 .comentarios{
     border: 2px red solid;
-    width: fit-content;
+    width: 500px;
     position: relative;
     bottom: 35px;
     left: 1%;

@@ -4,7 +4,7 @@ import './Pagina_principal.css'
 function Pagina_principal() {
   return (
     <div>
-
+      
     </div>
   )
 }

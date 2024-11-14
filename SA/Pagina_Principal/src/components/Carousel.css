@@ -1,0 +1,135 @@
+body{
+    background-image: 'back_ground_sem_arvi.svg';
+}
+.containerCarousel{
+    border: 2px #0C0C3E solid;
+    border-radius: 10px;
+    width: 90%;
+    height: 450px;
+    background-color: #0C0C3E;
+    position: relative;
+    left: 5%;
+    z-index: 0;
+    --swiper-pagination-bullet-inactive-color: #FFF;
+    label{
+        position: relative;
+        left: 50px;
+        color: white;
+        font-size: 25px;
+    }
+    img{
+        border: 2px red solid;
+        border-radius: 5px;
+        width: 250px;
+        height: 350px;
+        position: relative;
+        left: 45px;
+    }
+}
+
+.swiper-button-next{
+    --swiper-theme-color: #FFF;
+}
+.swiper-button-prev{
+    --swiper-theme-color: #FFF;
+}
+.modalPostagem{
+    background-color: #212277;
+    width: 50%;
+    height: 80%;
+    position: relative;
+    left: 25%;
+    top: 10%;
+    button{
+        border: none;
+        width: 50px;
+        height: 50px;
+        background-color: #0E1065;
+        box-shadow: none;
+    }
+    .buttonPostar{
+        font-size: 20px;
+    }
+}
+
+.inputsUm{
+    position: relative;
+    left: 10%;
+    top: 10px;
+    width: 40%;
+    /* border: 2px green solid; */
+    label{
+        color: white;
+        font-size: 20px;
+    }
+    input{
+        width: 300px;
+        height: 20px;
+    }
+}
+.caixaSinopse{
+    /* border: 2px blue solid; */
+    width: 50%;
+    position: relative;
+    left: 50%;
+    bottom: 550px;
+    color: white;
+    font-size: 25px;
+    button{
+        border-radius: 5px;
+        position: relative;
+        left: 13%;
+        width: 300px;
+        height: 30px;
+        color: white;
+    }
+    textarea{
+        resize: none;
+    }
+}
+.buttonAdc{
+    width: 100px;
+    position: relative;
+    left: 90%;
+    bottom: 14.5%;
+    border: none;
+    font-size: 20px;
+    color: white;
+    background-color: #00002D;
+
+}
+.buttonAdc:hover{
+    border-radius: 3px;
+    background-color: white;
+    color: black;
+}
+.infosObra{
+    .buttonCloseModal{
+        background-color: #0E1065;
+        border-bottom-right-radius: 5px;
+    }
+}
+.carouselDois{
+    position: relative;
+    top: 10%;
+    border: 2px red solid;
+    border: 2px #0C0C3E solid;
+    border-radius: 10px;
+    height: 450px;
+    background-color: #0C0C3E;
+    img{
+        border: 2px red solid;
+        border-radius: 5px;
+        width: 250px;
+        height: 350px;
+        position: relative;
+        left: 45px;
+        top: 25px;
+    }
+    label{
+        position: relative;
+        top: 25px;
+        color: white;
+        font-size: 25px;
+    }
+}
