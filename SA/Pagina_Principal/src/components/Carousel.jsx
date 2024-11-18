@@ -30,52 +30,28 @@ function Carousel() {
     
 
   const [imagensObrasFrutas, setImagensObrasFrutas] = useState([
-    {
-      id: '1',
-      a: 'https://stackoverflow.com/questions/65590148/swiperjs-how-do-you-style-the-pagination-bullets', 
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Bananas_%28Alabama_Extension%29.jpg/1200px-Bananas_%28Alabama_Extension%29.jpg',
-      titulo: 'banana',
-      genero: 'frutas'
-    },
-    {
-      id: '2', 
-      image: 'https://lh4.googleusercontent.com/proxy/164-DMLRNy1eWrUvCsbkEslbqoOtis7-OJ5DPjR0qpBk3vWf4TRtzNTcpXLlUaWxhfp4_H0m6iNcsDlnlOjuwQKw6J6A2KfF1KQQb1YNr1O9wk4Vmc5lKM8MkZz-1SGR5jbLqgRNi_C0sMmdsmiXXEUnR47U0vBkWBn9aA7WhLrbo2EXiEZ2bOLqXFk5b3cOLB2E6MCc',
-      titulo: 'maça'
-    },
-    {
-      id: '3', 
-      image: 'https://revistacampoenegocios.com.br/wp-content/uploads/2020/09/Foto-02-2.jpg',
-      titulo: 'manga'
-    },
-    {
-      id: '4', 
-      image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Bananas_%28Alabama_Extension%29.jpg/1200px-Bananas_%28Alabama_Extension%29.jpg',
-      titulo: 'banana'
-    },
-    {
-      id: '5', 
-      image: 'https://lh4.googleusercontent.com/proxy/164-DMLRNy1eWrUvCsbkEslbqoOtis7-OJ5DPjR0qpBk3vWf4TRtzNTcpXLlUaWxhfp4_H0m6iNcsDlnlOjuwQKw6J6A2KfF1KQQb1YNr1O9wk4Vmc5lKM8MkZz-1SGR5jbLqgRNi_C0sMmdsmiXXEUnR47U0vBkWBn9aA7WhLrbo2EXiEZ2bOLqXFk5b3cOLB2E6MCc',
-      titulo: 'maça'
-    },
-    {
-      id: '6', 
-      image: 'https://revistacampoenegocios.com.br/wp-content/uploads/2020/09/Foto-02-2.jpg',
-      titulo: 'manga',
-    },
+    {id: '1',
+    a: 'https://stackoverflow.com/questions/65590148/swiperjs-how-do-you-style-the-pagination-bullets', 
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Bananas_%28Alabama_Extension%29.jpg/1200px-Bananas_%28Alabama_Extension%29.jpg',
+    titulo: 'banana',
+    genero: 'frutas'},
+    {id: '2', 
+    image: 'https://lh4.googleusercontent.com/proxy/164-DMLRNy1eWrUvCsbkEslbqoOtis7-OJ5DPjR0qpBk3vWf4TRtzNTcpXLlUaWxhfp4_H0m6iNcsDlnlOjuwQKw6J6A2KfF1KQQb1YNr1O9wk4Vmc5lKM8MkZz-1SGR5jbLqgRNi_C0sMmdsmiXXEUnR47U0vBkWBn9aA7WhLrbo2EXiEZ2bOLqXFk5b3cOLB2E6MCc',
+    titulo: 'maça'},
+    {id: '3', 
+    image: 'https://revistacampoenegocios.com.br/wp-content/uploads/2020/09/Foto-02-2.jpg',
+    titulo: 'manga'},
+    {id: '4', 
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Bananas_%28Alabama_Extension%29.jpg/1200px-Bananas_%28Alabama_Extension%29.jpg',
+    titulo: 'banana'},
+    {id: '5', 
+    image: 'https://lh4.googleusercontent.com/proxy/164-DMLRNy1eWrUvCsbkEslbqoOtis7-OJ5DPjR0qpBk3vWf4TRtzNTcpXLlUaWxhfp4_H0m6iNcsDlnlOjuwQKw6J6A2KfF1KQQb1YNr1O9wk4Vmc5lKM8MkZz-1SGR5jbLqgRNi_C0sMmdsmiXXEUnR47U0vBkWBn9aA7WhLrbo2EXiEZ2bOLqXFk5b3cOLB2E6MCc',
+    titulo: 'maça'},
+    {id: '6', 
+    image: 'https://revistacampoenegocios.com.br/wp-content/uploads/2020/09/Foto-02-2.jpg',
+    titulo: 'manga'},
   ])
   const [imagensObrasAcao, setImagensObrasacao] = useState([
-    {
-      id: '1',
-      image: './7.svg',
-      titulo: 'The Boys',
-      genero: 'Ação'
-    },
-    {
-      id: '2',
-      image: './8.svg',
-      titulo: 'Invencivel',
-      genero: 'Ação'
-    },
     
   ])
 
@@ -92,47 +68,55 @@ function Carousel() {
     
   }
 
+  
+
   function guardar_infos_postagem() {
+    if (formState.title == '' ||  formState.subtitle == '' || formState.author == '' || formState.pages == '' || 
+    formState.date == '' || formState.summary == '' || formState.images == '' || formState.genre == ''){
+      alert('Voce esqueceu de preencher um dos campos, por favor preenchão para poder postr sua obra 😊')
+    }
+
+
     if (formState.genre == "frutas"){
       setImagensObrasFrutas((imagensObrasFrutas) => 
       [...imagensObrasFrutas, 
-      {id: imagensObrasFrutas.length + 1, image: formState.images, titulo: formState.title, genero: formState.genre}])
+      {id: imagensObrasFrutas.length + 1, image: 'https://revistacampoenegocios.com.br/wp-content/uploads/2020/09/Foto-02-2.jpg', titulo: 'manga', genero: 'frutas'}])
       console.log(imagensObrasFrutas)
     }else if( formState.genre == "acao"){
       setImagensObrasacao((imagensObrasAcao) => 
     [...imagensObrasAcao, 
-    {id: imagensObrasAcao.length + 1, image: formState.images, titulo: formState.title, genero: formState.genre}])
+    {id: imagensObrasAcao.length + 1, image: './2.jpg', titulo: 'manga', genero: 'ação'}])
     console.log(imagensObrasAcao)
     }
     
   }
   return (
     <div className='containerCarousel'>
-      <button className='buttonAdc' onClick={adcImagens}>Postar</button>
+      <button onClick={adcImagens}>adc</button>
       
      <Swiper
-      slidesPerView={5}
+      slidesPerView={3}
       pagination={{ clickable: true}}
       navigation  
      >
       {imagensObrasFrutas.map((item) => (
         <SwiperSlide key={item.id}>
           <a href={item.a}>
-            <img src={item.image}/>
+            <img className='imgs' src={item.image}/>
           </a><br />
           <label>{item.titulo}</label>
         </SwiperSlide>
       ))}
-     </Swiper><br /><br />
-     <Swiper className='carouselDois'
-      slidesPerView={5}
+     </Swiper><br />
+     <Swiper
+      slidesPerView={1}
       pagination={{ clickable: true}}
       navigation  
      >
       {imagensObrasAcao.map((item) => (
         <SwiperSlide key={item.id}>
           <a href={item.a}>
-            <img src={item.image}/>
+            <img className='imgs' src={item.image}/>
           </a><br />
           <label>{item.titulo}</label>
         </SwiperSlide>
@@ -145,8 +129,10 @@ function Carousel() {
       contentLabel='Modal de exemplo'
       ariaHideApp={false}
       >
+      
+        
         <div className='infosObra'>
-        <button className='buttonCloseModal' onClick={fecharModal}><img src="./fechar_modal.svg"/></button>
+        <button className='buttonFecharModal' onClick={fecharModal}><img src="./fechar_modal.svg"/></button>
           <div className='inputsUm'>
             <label>Link da sua imagen</label><br />
             <input 
@@ -155,7 +141,7 @@ function Carousel() {
             value={formState.images} 
             onChange={(e) => 
             setFormState({...formState, images: e.target.value})}/>
-            <br /><br /><br /><br />
+            <br /><br /><br />
             
             <label>Titulo</label><br />
             <input 
@@ -164,7 +150,7 @@ function Carousel() {
             value={formState.title} 
             onChange={(e) => 
             setFormState({...formState, title: e.target.value})}/>
-            <br /><br /><br /><br />
+            <br /><br /><br />
 
             <label>Subtitulo</label><br />
             <input type="text" 
@@ -172,7 +158,7 @@ function Carousel() {
             value={formState.subtitle} 
             onChange={(e) => 
             setFormState({...formState, subtitle: e.target.value})}/>
-            <br /><br /><br /><br />
+            <br /><br /><br />
 
             <label>Nome do Autor</label><br />
             <input 
@@ -181,7 +167,7 @@ function Carousel() {
             value={formState.author} 
             onChange={(e) => 
             setFormState({...formState, author: e.target.value})}/>
-            <br /><br /><br /><br />
+            <br /><br /><br />
 
             <label>Gênero</label><br />
             <input 
@@ -190,7 +176,7 @@ function Carousel() {
             value={formState.genre} 
             onChange={(e) => 
             setFormState({...formState, genre: e.target.value})}/>
-            <br /><br /><br /><br />
+            <br /><br /><br />
 
             <label>Numero de paginas</label><br />
             <input 
@@ -222,8 +208,9 @@ function Carousel() {
                 value={formState.summary} 
                 onChange={(e) => 
                 setFormState({...formState, summary: e.target.value})}></textarea><br /><br />
-                <button className='buttonPostar' type="submit" onClick={guardar_infos_postagem}>Postar</button>
+                <button type="submit" onClick={guardar_infos_postagem}>Postar</button>
             </div>
+        
         </div>
       </Modal>
     </div>

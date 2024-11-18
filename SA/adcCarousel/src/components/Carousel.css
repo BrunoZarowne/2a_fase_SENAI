@@ -54,6 +54,7 @@
     /* border: 2px green solid; */
     label{
         color: white;
+        font-size: 22px;
     }
     input{
         width: 300px;
@@ -74,5 +75,9 @@
         width: 300px;
         height: 30px;
         color: white;
+        font-size: 25px;
+    }
+    label{
+        font-size: 22px;
     }
 }

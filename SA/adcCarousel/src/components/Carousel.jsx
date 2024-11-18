@@ -68,7 +68,15 @@ function Carousel() {
     
   }
 
+  
+
   function guardar_infos_postagem() {
+    if (formState.title == '' ||  formState.subtitle == '' || formState.author == '' || formState.pages == '' || 
+    formState.date == '' || formState.summary == '' || formState.images == '' || formState.genre == ''){
+      alert('Voce esqueceu de preencher um dos campos, por favor preenchão para poder postr sua obra 😊')
+    }
+
+
     if (formState.genre == "frutas"){
       setImagensObrasFrutas((imagensObrasFrutas) => 
       [...imagensObrasFrutas, 
@@ -124,6 +132,7 @@ function Carousel() {
       
         
         <div className='infosObra'>
+        <button className='buttonFecharModal' onClick={fecharModal}><img src="./fechar_modal.svg"/></button>
           <div className='inputsUm'>
             <label>Link da sua imagen</label><br />
             <input 
@@ -132,7 +141,7 @@ function Carousel() {
             value={formState.images} 
             onChange={(e) => 
             setFormState({...formState, images: e.target.value})}/>
-            <br /><br /><br /><br />
+            <br /><br /><br />
             
             <label>Titulo</label><br />
             <input 
@@ -141,7 +150,7 @@ function Carousel() {
             value={formState.title} 
             onChange={(e) => 
             setFormState({...formState, title: e.target.value})}/>
-            <br /><br /><br /><br />
+            <br /><br /><br />
 
             <label>Subtitulo</label><br />
             <input type="text" 
@@ -149,7 +158,7 @@ function Carousel() {
             value={formState.subtitle} 
             onChange={(e) => 
             setFormState({...formState, subtitle: e.target.value})}/>
-            <br /><br /><br /><br />
+            <br /><br /><br />
 
             <label>Nome do Autor</label><br />
             <input 
@@ -158,7 +167,7 @@ function Carousel() {
             value={formState.author} 
             onChange={(e) => 
             setFormState({...formState, author: e.target.value})}/>
-            <br /><br /><br /><br />
+            <br /><br /><br />
 
             <label>Gênero</label><br />
             <input 
@@ -167,7 +176,7 @@ function Carousel() {
             value={formState.genre} 
             onChange={(e) => 
             setFormState({...formState, genre: e.target.value})}/>
-            <br /><br /><br /><br />
+            <br /><br /><br />
 
             <label>Numero de paginas</label><br />
             <input 
@@ -201,8 +210,8 @@ function Carousel() {
                 setFormState({...formState, summary: e.target.value})}></textarea><br /><br />
                 <button type="submit" onClick={guardar_infos_postagem}>Postar</button>
             </div>
+        
         </div>
-        <button onClick={fecharModal}><img src="./fechar_modal.svg"/></button>
       </Modal>
     </div>
   )
@@ -217,3 +226,6 @@ export default Carousel
 
 // codiguin pra adicionar no useState
 // setImagensObras((imagensObras) => [...imagensObras, {id: imagensObras.length + 1, image: 'URL da imagen que vai'}])
+
+// https://www.freecodecamp.org/portuguese/news/como-passar-dados-e-eventos-entre-componentes-em-react/
+// ver para user useEffect dps

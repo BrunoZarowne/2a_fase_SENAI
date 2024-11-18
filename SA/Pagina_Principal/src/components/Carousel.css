@@ -1,6 +1,3 @@
-body{
-    background-image: 'back_ground_sem_arvi.svg';
-}
 .containerCarousel{
     border: 2px #0C0C3E solid;
     border-radius: 10px;
@@ -17,14 +14,14 @@ body{
         color: white;
         font-size: 25px;
     }
-    img{
-        border: 2px red solid;
-        border-radius: 5px;
-        width: 250px;
-        height: 350px;
-        position: relative;
-        left: 45px;
-    }
+}
+.imgs{
+    border: 2px red solid;
+    border-radius: 5px;
+    width: 250px;
+    height: 350px;
+    position: relative;
+    left: 45px;
 }
 
 .swiper-button-next{
@@ -47,20 +44,17 @@ body{
         background-color: #0E1065;
         box-shadow: none;
     }
-    .buttonPostar{
-        font-size: 20px;
-    }
 }
 
 .inputsUm{
     position: relative;
     left: 10%;
-    top: 10px;
+    top: 50px;
     width: 40%;
     /* border: 2px green solid; */
     label{
         color: white;
-        font-size: 20px;
+        font-size: 22px;
     }
     input{
         width: 300px;
@@ -72,9 +66,8 @@ body{
     width: 50%;
     position: relative;
     left: 50%;
-    bottom: 550px;
+    bottom: 500px;
     color: white;
-    font-size: 25px;
     button{
         border-radius: 5px;
         position: relative;
@@ -82,54 +75,9 @@ body{
         width: 300px;
         height: 30px;
         color: white;
-    }
-    textarea{
-        resize: none;
-    }
-}
-.buttonAdc{
-    width: 100px;
-    position: relative;
-    left: 90%;
-    bottom: 14.5%;
-    border: none;
-    font-size: 20px;
-    color: white;
-    background-color: #00002D;
-
-}
-.buttonAdc:hover{
-    border-radius: 3px;
-    background-color: white;
-    color: black;
-}
-.infosObra{
-    .buttonCloseModal{
-        background-color: #0E1065;
-        border-bottom-right-radius: 5px;
-    }
-}
-.carouselDois{
-    position: relative;
-    top: 10%;
-    border: 2px red solid;
-    border: 2px #0C0C3E solid;
-    border-radius: 10px;
-    height: 450px;
-    background-color: #0C0C3E;
-    img{
-        border: 2px red solid;
-        border-radius: 5px;
-        width: 250px;
-        height: 350px;
-        position: relative;
-        left: 45px;
-        top: 25px;
+        font-size: 25px;
     }
     label{
-        position: relative;
-        top: 25px;
-        color: white;
-        font-size: 25px;
+        font-size: 22px;
     }
 }
