@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Carousel from './components/Carousel'
+import Pagina_obra_base from './components/Pagina_obra_base'
 
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
   return (
     <>
      <div>
-      <Carousel />
+      <Pagina_obra_base />
+      {/* <Carousel /> */}
     </div>
     </>
   )

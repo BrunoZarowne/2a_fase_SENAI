@@ -51,6 +51,8 @@
     left: 10%;
     top: 50px;
     width: 40%;
+    display: flexbox;
+    justify-content: space-around;
     /* border: 2px green solid; */
     label{
         color: white;

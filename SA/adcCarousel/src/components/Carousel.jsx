@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import './Carousel.css'
 import { register } from 'swiper/element/bundle'
+import Pagina_obra_base from './Pagina_obra_base'
 import Modal from 'react-modal'
 
 register()
@@ -12,9 +13,9 @@ import 'swiper/css/scrollbar'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-
-
 function Carousel() { 
+
+
 
   const [formState, setFormState] = useState({
       title: "",
@@ -74,22 +75,25 @@ function Carousel() {
     if (formState.title == '' ||  formState.subtitle == '' || formState.author == '' || formState.pages == '' || 
     formState.date == '' || formState.summary == '' || formState.images == '' || formState.genre == ''){
       alert('Voce esqueceu de preencher um dos campos, por favor preenchão para poder postr sua obra 😊')
+    }else{
+      if (formState.genre == "frutas"){
+        setImagensObrasFrutas((imagensObrasFrutas) => 
+        [...imagensObrasFrutas, 
+        {id: imagensObrasFrutas.length + 1, image: formState.images, titulo: formState.title, genero: formState.genre}])
+        console.log(imagensObrasFrutas)
+      }else if( formState.genre == "acao"){
+        setImagensObrasacao((imagensObrasAcao) => 
+      [...imagensObrasAcao, 
+      {id: imagensObrasAcao.length + 1, image: formState.images, titulo: formState.title, genero: formState.genre}])
+      console.log(imagensObrasAcao)
+      }
     }
 
 
-    if (formState.genre == "frutas"){
-      setImagensObrasFrutas((imagensObrasFrutas) => 
-      [...imagensObrasFrutas, 
-      {id: imagensObrasFrutas.length + 1, image: 'https://revistacampoenegocios.com.br/wp-content/uploads/2020/09/Foto-02-2.jpg', titulo: 'manga', genero: 'frutas'}])
-      console.log(imagensObrasFrutas)
-    }else if( formState.genre == "acao"){
-      setImagensObrasacao((imagensObrasAcao) => 
-    [...imagensObrasAcao, 
-    {id: imagensObrasAcao.length + 1, image: './2.jpg', titulo: 'manga', genero: 'ação'}])
-    console.log(imagensObrasAcao)
-    }
-    
   }
+  
+ 
+
   return (
     <div className='containerCarousel'>
       <button onClick={adcImagens}>adc</button>
