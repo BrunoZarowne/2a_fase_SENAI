@@ -46,7 +46,7 @@
     width: 80%;
     background-color: #0F0F4E;
     color: white;
-    font-size: 15px;
+    font-size: 22px;
     position: relative;
     bottom: 50%;
     left: 1px;
@@ -72,7 +72,7 @@
 .txtAutor{
     font-size: 25px;
     position: relative;
-    left: 55%;
+    right: 50%;
     bottom: 35px;
 }
 .inserirAutor{

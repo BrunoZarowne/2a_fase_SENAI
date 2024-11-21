@@ -1,9 +1,10 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useContext } from 'react'
+import { useState, createContext } from 'react'
 import './Carousel.css'
 import { register } from 'swiper/element/bundle'
-import Pagina_obra_base from './Pagina_obra_base'
 import Modal from 'react-modal'
+
+
 
 register()
 import 'swiper/css'
@@ -16,8 +17,8 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 function Carousel() { 
 
 
-
   const [formState, setFormState] = useState({
+      id: "",
       title: "",
       subtitle: "",
       author: "",

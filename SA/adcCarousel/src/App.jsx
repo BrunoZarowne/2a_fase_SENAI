@@ -10,8 +10,8 @@ function App() {
   return (
     <>
      <div>
-      <Pagina_obra_base />
-      {/* <Carousel /> */}
+      {/* <Pagina_obra_base /> */}
+      <Carousel />
     </div>
     </>
   )
