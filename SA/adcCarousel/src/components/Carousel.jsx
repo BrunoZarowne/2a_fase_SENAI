@@ -1,9 +1,8 @@
 import React, { useContext } from 'react'
-import { useState, createContext } from 'react'
+import { useState } from 'react'
 import './Carousel.css'
 import { register } from 'swiper/element/bundle'
 import Modal from 'react-modal'
-
 
 
 register()
@@ -15,7 +14,6 @@ import 'swiper/css/scrollbar'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 function Carousel() { 
-
 
   const [formState, setFormState] = useState({
       id: "",
@@ -75,7 +73,7 @@ function Carousel() {
   function guardar_infos_postagem() {
     if (formState.title == '' ||  formState.subtitle == '' || formState.author == '' || formState.pages == '' || 
     formState.date == '' || formState.summary == '' || formState.images == '' || formState.genre == ''){
-      alert('Voce esqueceu de preencher um dos campos, por favor preenchão para poder postr sua obra 😊')
+      alert('Voce esqueceu de preencher um dos campos, por favor preencha para poder postar sua obra 😊')
     }else{
       if (formState.genre == "frutas"){
         setImagensObrasFrutas((imagensObrasFrutas) => 
