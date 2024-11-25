@@ -1,0 +1,207 @@
+
+
+.back_groud_user_profile_div{
+
+width: 100%;
+height: 50vh;
+background-image:url('../images/BackUmUser.gif') ;
+background-repeat: no-repeat;
+background-size: cover;
+align-items: center;
+justify-content: center;
+display: flex;
+justify-content: space-between;
+border-bottom: 2px solid black;
+background-position: center;
+}
+
+
+.div_container_informações_usuarios{
+
+    background: rgba(7, 8, 60, 0);
+/* background: radial-gradient(circle, rgba(7,8,60,1) 0%, rgba(0,3,140,1) 77%, rgba(0,0,45,1) 100%);  */
+width: 100%;
+height: 50vh;
+
+}*{padding: 0;
+margin: 0;
+}
+.container_button{
+
+justify-content: space-evenly;
+display: flex;
+background-color: #00002d00;
+flex-direction: row-reverse;
+}.container_pag_usuario{
+ 
+    background: linear-gradient(45deg,#1b44b6, #00002D);
+    background-size: 400% 400%;
+    animation: container_pag_usuario 10s ease infinite;
+  
+
+}/* Animação de gradiente entre #090979 e #00002D */
+@keyframes container_pag_usuario {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+
+
+body{
+
+        overflow: hidden;
+    }.quatro{
+
+
+border: solid coral;
+    }.div_botão{
+margin-bottom: 21%;
+
+    }.botao_voltar{
+
+padding: 0;
+background-image: url(./images/dinhero_icon.svg);
+
+
+    }
+.imgAdicionarIcons{
+   width: 53px;
+
+    }
+    .modalFotosUser{
+        
+        border: none;
+        border-radius: 10px;
+        width: 40%;
+        box-shadow: 0 0 1em white;
+        position: fixed; /*Garante que ele fique fora do fluxo normal */ 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centraliza o diálogo */
+        padding: 20px;
+        height: fit-content;
+        background-color: #00002D;
+        
+        
+     
+        
+
+    }
+    .iconUser{
+        width: 120px;
+        height: 120px;
+        margin: 30px;
+    }
+    .pTrocarFoto{
+        font-size: 20px;
+        font-family:"Poppins-Bold" ;
+        color: white;
+
+    }
+@font-face {
+    font-family:"Poppins-Bold" ;
+    src: url(../fonts/Poppins/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family:"Poppins-ExtraBold" ;
+    src: url(../fonts/Poppins/Poppins-ExtraBold.ttf);
+}
+.button_doacoes,.button_favoritos,.button_historico,.button_info_conta{
+    width:250px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    }.button_doacoes{
+        background-image: url(./images/icon_doacoes.svg);
+    background-size: 30px;
+    background-position: 10px;
+    background-repeat: no-repeat;
+    font-family:'Poppins-Bold';
+    padding-right: 21px;
+    }
+    .button_doacoes.ativo{
+     background-color: white;
+    }.button_doacoes.inativo{
+        background-color: rgba(2, 2, 99, 0);
+            border:  white solid 2px;
+            color: white ;
+            background-size: 30px;
+            background-position: 10px;
+            background-image: url(./images/icon_doacoes_white.svg);
+    }
+        .button_favoritos{
+            background-image: url(./images/icon_obras_fav.svg);
+            background-size: 30px;
+            background-position: 10px;
+            background-repeat: no-repeat;
+            font-family:'Poppins-Bold';
+            padding-right: 1px;
+        }
+        .button_favoritos.ativo{
+            background-color: rgb(255, 255, 255);
+           
+        }.button_favoritos.inativo{
+            background-color: rgba(2, 2, 99, 0);
+            border:  white solid 2px;
+            color: white ;
+            background-size: 30px;
+            background-position: 10px;
+            background-image: url(./images/icon_obras_fav_white.svg);
+        }
+       
+       
+       
+       
+       
+        .button_historico{
+            background-image: url(./images/icon_historico.svg);
+            background-size: 30px;
+            background-position: 10px;
+            background-repeat: no-repeat;
+            font-family:'Poppins-Bold';
+            padding-right: 1px;
+        }.button_historico.ativo{
+          background-color: #ffffff;
+        }.button_historico.inativo{
+            background-color: rgba(2, 2, 99, 0);
+            border:  white solid 2px;
+            color: white ;
+            background-size: 30px;
+            background-position: 10px;
+            background-image: url(./images/icon_historico_white.svg);
+        }
+       
+       
+       
+       
+        .button_info_conta{
+           
+            background-image: url(./images/icon_editar_user.svg);
+            background-size: 30px;
+            background-position: 10px;
+            background-repeat: no-repeat;
+            font-family:'Poppins-Bold';
+           
+        }.button_info_conta.ativo{
+           background-color: rgb(255, 255, 255);
+       
+    }
+        .button_info_conta.inativo{
+            background-color: rgba(2, 2, 99, 0);
+        border:  white solid 2px;
+        color: white ;
+        background-image: url(./images/icon_user_edit_white.svg);
+        background-size: 30px;
+        background-position: 10px;
+        }
+      
+
+
+

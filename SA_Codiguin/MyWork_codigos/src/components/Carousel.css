@@ -1,0 +1,162 @@
+html, body{
+    overflow: auto;
+    background-image: url("https://images.unsplash.com/photo-1660895870525-405631bb6c18?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+
+}
+.containerCarousel{
+    width: 100%;
+    height: 100%;    
+}
+.carouselMangas{
+    border: 2px #0C0C3E solid;
+    border-radius: 10px;
+    width: 90%;
+    height: 450px;
+    background-color: rgba(12, 12, 62, 0.80);
+    position: relative;
+    left: 5%;
+    z-index: 0;
+    --swiper-pagination-bottom: 95%;
+    label{
+        position: relative;
+        left: 50px;
+        color: white;
+        font-size: 25px;
+        font-family: "Poppins-Bold";
+    }
+    .imgsMangas{
+        width: 250px;
+        height: 350px;
+        position: relative;
+        padding-top: 25px;
+        left: 45px;
+    }
+}
+
+.carouselHQs{
+    border: 2px #0C0C3E solid;
+    border-radius: 10px;
+    width: 90%;
+    height: 450px;
+    background-color: rgba(12, 12, 62, 0.80);
+    position: relative;
+    left: 5%;
+    z-index: 0;
+    color: white;
+    --swiper-pagination-bottom: 95%;
+    label{
+        position: relative;
+        left: 12%;
+        font-size: 25px;
+        font-family: "Poppins-Bold";
+    }
+    .imgsHQs{
+        width: 250px;
+        height: 350px;
+        position: relative;
+        left: 45px;
+        padding-top: 25px;
+    }
+}
+
+.carouselLivros{
+    border: 2px #0C0C3E solid;
+    border-radius: 10px;
+    width: 90%;
+    height: 450px;
+    background-color: rgba(12, 12, 62, 0.80);
+    position: relative;
+    left: 5%;
+    z-index: 0;
+    color: white;
+    --swiper-pagination-bottom: 95%;
+    label{
+        position: relative;
+        left: 12%;
+        font-size: 25px;
+        font-family: "Poppins-Bold";
+    }
+    .imgsLivros{
+        width: 250px;
+        height: 350px;
+        position: relative;
+        left: 45px;
+        padding-top: 25px;
+    }
+}
+
+.swiper-button-next{
+    --swiper-theme-color: #FFF;
+}
+.swiper-button-prev{
+    --swiper-theme-color: #FFF;
+}
+.modalPostagem{
+    background-color: #212277;
+    width: 50%;
+    height: 80%;
+    position: relative;
+    left: 25%;
+    top: 10%;
+    button{
+        border: none;
+        width: 50px;
+        height: 50px;
+        background-color: #0E1065;
+        box-shadow: none;
+    }
+}
+
+.inputsUm{
+    position: relative;
+    left: 10%;
+    top: 50px;
+    width: 40%;
+    display: flexbox;
+    justify-content: space-around;
+    /* border: 2px green solid; */
+    label{
+        color: white;
+        font-size: 22px;
+    }
+    input{
+        width: 300px;
+        height: 20px;
+    }
+}
+.caixaSinopse{
+    /* border: 2px blue solid; */
+    width: 50%;
+    position: relative;
+    left: 50%;
+    bottom: 500px;
+    color: white;
+    button{
+        border-radius: 5px;
+        position: relative;
+        left: 13%;
+        width: 300px;
+        height: 30px;
+        color: white;
+        font-size: 25px;
+    }
+    label{
+        font-size: 22px;
+    }
+}
+.buttonCarousel{
+    border: none;
+    width: 200px;
+    background-color: #00002D;
+    color: white;
+    font-size: 20px;
+    position: relative;
+    left: 88%;
+    bottom: 45px;
+}
+.buttonCarousel:hover{
+    border-radius: 3px;
+    background-color: white;
+    color: black;
+}
+

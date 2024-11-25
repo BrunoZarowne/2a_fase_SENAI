@@ -1,0 +1,110 @@
+
+@font-face {
+    font-family:"Poppins-Bold" ;
+    src: url(../fonts/Poppins/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family:"Poppins-ExtraBold" ;
+    src: url(../fonts/Poppins/Poppins-ExtraBold.ttf);
+}
+
+
+
+
+
+
+.divImagem{
+    background-image: url('../images/backGroud-cadastro.svg');
+    min-width: 100vh;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+.containerLanding{
+    display: flex;
+}
+.divText{
+   
+    background-image: url('../images/2parte_landing.svg');
+    min-width: 50.5vw;
+    min-height: 48.9vh;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+    margin: 0;
+    background-color: #000017;
+}
+*{
+    margin: 0;
+    padding: 0;
+    ;
+   
+
+}
+.h1Landing{
+    margin-left: 19%;
+    font-family:Poppins-ExtraBold ;
+    margin-top: 20%;
+    font-size: 60px;
+    color: azure;
+}
+.divTextP{
+    margin-top: 5%;
+    margin-left: 20%;
+    color: azure;
+}
+.pInfoSite{
+    font-family:Poppins-Bold;
+    font-size: 20px;
+}
+.divButaos{
+    margin-left: 20%;
+    margin-top: 10%;
+
+}
+.butaoUm{
+    background-color: azure;
+    padding: 15px;
+    font-size: 33px;
+    border-radius: 25px;
+    outline: 0;
+    box-shadow: 0 0 18px  #7DA2BD;
+    margin: 30px;
+    border: none;
+    font-family:Poppins-ExtraBold ;
+    margin-left: 30px;
+    width: 200px;
+    height: 70px;
+}
+.butaoUm:hover{
+    box-shadow: 0 0 100px #7DA2BD;
+    transition: 550ms;
+}
+.butaoDois{
+    background-color: #00001700;
+    margin: 30px;
+    border: 2px solid white;
+    border-radius: 20px;
+    font-family:Poppins-ExtraBold ;
+    font-size: 30px;
+    border-radius: 25px;
+    padding: 15px;
+    height: 70px;
+    width: 200px;
+}
+.linkCadastro{
+    text-decoration: none;
+    color: azure;
+   
+}
+.butaoDois:hover{
+    box-shadow: 0 0 10px #8DCFF7;
+    transition: 300ms;
+  
+}
+.divCustomRadio{
+    display: flex;
+}

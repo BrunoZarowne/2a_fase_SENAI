@@ -1,0 +1,107 @@
+.divImagemFundo{
+ background-image: url('../images/backGroud-cadastro.svg');
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+ min-height: 100vh;
+ align-items: center;
+ justify-content: center;
+ display: flex;
+
+}
+.divContainerInfo{
+    background-color: #00002f;
+    height: fit-content;
+    width: 57vh;
+    color: white;
+    font-family: "Poppins-Bold";
+    align-items: center;
+    box-shadow: 0 0 900vh black;
+    border-radius: 20px;
+   
+}
+/* h1{
+    color: white;
+    font-size: 70px;
+justify-items: center;
+margin-left: 170px;
+
+
+} */
+.pText{
+color: white;
+margin-top: 40px;
+font-size: 15px;
+margin-left: 40px;
+margin-bottom: 30px;
+
+
+}
+.divInpt{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.Email_User{
+    width: 300PX;
+    height: 50px;
+    border-radius: 15px;
+    margin: 15px;
+    font-size: 20px;
+    border: none;;
+}
+.senha_User{
+    width: 300PX;
+    height: 50px;
+    border-radius: 15px;
+    margin: 15px;
+    font-size: 20px;
+    border: none;
+}.button_logar{
+    margin: 40px;
+    width: 239px;
+    height: 45px;
+    font-family: "Poppins-Bold";
+    font-size: 26px;
+    border: 2px solid #8DCFF7;
+    border-radius: 15px;
+
+
+}@font-face {
+    font-family:"Poppins-Bold" ;
+    src: url(../fonts/Poppins/Poppins-Bold.ttf);
+}
+.senha_User:hover{
+    outline: 0;
+}.Email_User:hover{
+
+    outline: 0;
+}.button_logar:hover{
+    background-color: #8DCFF7;
+    transition: 400ms;
+    color: white;
+        }.link_login{
+color:#8DCFF7;
+
+
+
+
+        }.naoPossuiUmaConta{
+color: rgb(255, 255, 255);
+
+
+        }.container_button{
+margin-top: 20px;
+
+
+
+
+        }.login_h1{
+
+            font-size: 50px;
+       margin-left: 10%;
+      font-family: 'Poppins-Bold';
+    
+    
+    }

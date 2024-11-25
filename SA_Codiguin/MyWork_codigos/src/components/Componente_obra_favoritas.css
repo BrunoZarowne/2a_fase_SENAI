@@ -1,0 +1,13 @@
+.container_obras_favoritas{
+
+    background-color:white ;
+    margin-top: 10px;
+    margin-left: 17px;
+    width: 47%;
+    height: 40vh;
+    border-radius: 10px;
+    display: flex;
+    justify-content:space-evenly;
+
+
+}

@@ -1,0 +1,49 @@
+.cardUsuarios{
+    background-color: #060646;
+    margin: 20px;
+    width: fit-content;
+    padding: 30px;
+    border-radius: 10px;
+    width: 200px;
+   
+}
+.containerCard{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: fit-content;
+    width: 100%;
+   
+    
+}
+@font-face {
+    font-family:Roboto-Medium ;
+    src: url('../fonts/Roboto-Medium.ttf');
+}
+.pNome,.pSenha,.pDataNascimento,.pEmail{
+    font-family:Roboto-Medium ;
+    margin: 5px;
+    background-color:azure ;
+    padding: 4px;
+    border-radius:30px ;
+   
+    
+}
+.imgUser{
+    width: 50px;
+    height: 50px;
+}
+.botaoApagarUser{
+    padding: 3px;
+    color: red;
+    background-color: white;
+    border: 1px solid red;
+    border-radius: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.botaoApagarUser:hover{
+    background-color: red;
+    color: white;
+    transition: 600ms;
+}

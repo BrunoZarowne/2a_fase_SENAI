@@ -1,0 +1,87 @@
+.containerObraBase{
+    background-color: #00002D;
+    width: 100%;
+    height: 100vh;
+}
+.parte_cima{
+    display: flex;
+}
+.img_desc_obra{
+    position: relative;
+    left: 10%;
+    top: 56px;
+    label{
+        font-size: 80px;
+        color: white;
+    }
+    img{
+        width: 450px;
+        height: 600px;
+    }
+}
+.sinopse_genero{
+    /* border: 2px red solid; */
+    font-size: 35px;
+    color: white;
+    position: relative;
+    height: fit-content;
+    width: 1100px;
+    top: 280px;
+    left: 15%;
+    button{
+        border: 2px white solid;
+        border-radius: 5px;
+        width: 450px;
+        height: 40px;
+        background-color: #00002D;
+        color: white;
+        font-size: 30px;
+        position: relative;
+        left: 220px;
+    }
+}
+.caixaSinopsePagina{
+    border: 2px red solid;
+    height: 300px;
+    width: 80%;
+    background-color: #0F0F4E;
+    color: white;
+    font-size: 22px;
+    position: relative;
+    bottom: 50%;
+    left: 1px;
+
+}
+.txtSinopse{
+    position: relative;
+    bottom: 20px;
+    font-size: 50px;
+}
+.txtGeneros{
+    font-size: 20px;
+    position: relative;
+    left: 40%;
+    bottom: 10px;
+}
+.inserirGeneros{
+    font-size: 20px;
+    position: relative;
+    left: 40%;
+    bottom: 10px;
+}
+.txtAutor{
+    font-size: 25px;
+    position: relative;
+    right: 50%;
+    bottom: 35px;
+}
+.inserirAutor{
+    font-size: 25px;
+    position: relative;
+    left: 55%;
+    bottom: 35px;
+}
+.a{
+    color: white;
+}
+*{margin: 0; padding: 0;}

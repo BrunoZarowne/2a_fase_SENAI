@@ -1,0 +1,27 @@
+.ErroDoUsuario{
+    color: rgba(255, 0, 0, 0.893);
+    font-size: 20px;
+    font-family:'Roboto-bold';
+}
+.modalErroUsuario{
+    border: none;
+  border-radius: 10px;
+  width: fit-content;
+  box-shadow: 0 0 1em #ff0000;
+  position: fixed; /* Garante que ele fique fora do fluxo normal */
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centraliza o diálogo */
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border: 1px solid red;
+
+}
+@font-face {
+    font-family:'Roboto-bold' ;
+    src: url('../fonts/Roboto-Bold.ttf');
+
+}

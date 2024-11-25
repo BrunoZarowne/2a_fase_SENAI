@@ -1,0 +1,143 @@
+.divHeaderPage{
+    height: 100%;
+    background-color: #00002D;
+    
+
+}
+.imgsNavBar{
+    display: flex;
+    justify-content: space-between;
+    .sapo{
+        height: 100px;
+        width: 120px;
+        margin-left: 1%;
+    }
+    .user{
+        height: 80px;
+        width: 80px;
+        padding-top: 0.8%;
+        margin-right: 20px;
+        margin-top:15%;
+    }
+}
+.buttonsNav{
+    border-top: 2px white solid;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    button{
+        border: none;
+        font-size: 20px;
+        color: white;
+        background-color: #00002D;
+        
+    }
+    .bt1{
+        width: 200px;
+        background-color: #00002D;
+        color: white;
+    }
+    .bt1:hover{
+        border-radius: 3px;
+        background-color: white;
+        color: black;
+    }.bt1.ativo{
+      background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 3px;
+  }
+  
+  
+  
+  
+  
+    .bt2{
+        width: 300px;
+        background-color: #00002D;
+        color: white;
+    }
+    .bt2:hover{
+        border-radius: 3px;
+        background-color: white;
+        color: black;
+    }.bt2.ativo{
+      background-color: rgb(255, 255, 255);
+    color: black;
+   border-radius: 3px;
+  }
+    
+    
+    
+    
+    
+    .bt3{
+        width: 300px;
+        background-color: #00002D;
+        color: white;
+    }
+    .bt3:hover{
+        border-radius: 3px;
+        background-color: white;
+        color: black;
+    }
+    .bt3.ativo{
+      background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 3px;
+  }
+  
+  
+    .bt4{
+        width: 230px;
+        background-color: #00002D;
+        color: white;
+    }
+    .bt4:hover{
+        border-radius: 3px;
+        background-color: white;
+        color: black;
+    }.bt4.ativo{
+      background-color: rgb(255, 255, 255);
+    color: black;
+    border-radius: 3px;
+  }
+  
+  
+  
+  
+  
+    /* .bt5{
+        width: 230px;
+        background-color: #00002D;
+        color: white;
+    }
+    .bt5:hover{
+        border-radius: 3px;
+        background-color: white;
+        color: black;
+    } */
+  }
+  /* .bt5.ativo{
+    background-color: rgb(255, 255, 255);
+  color: black;
+  border-radius: 3px;
+  } */
+  .PnomeUsuario{
+    color: white;
+  }
+  .divNomeUserIcon{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .PnomeUsuario{
+    font-size: 20px;
+    margin-right: 15%;
+    font-family: Poppins-SemiBold;
+  }
+  @font-face {
+    font-family:"Poppins-SemiBold" ;
+    src: url(../fonts/Poppins/Poppins-SemiBold.ttf);
+  }

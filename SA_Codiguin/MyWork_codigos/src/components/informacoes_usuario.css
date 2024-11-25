@@ -1,0 +1,211 @@
+@font-face {
+    font-family:"Poppins-Regular" ;
+    src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+
+.container_info_usuarios{
+background-color:white ;
+margin-top: 10px;
+margin-left: 17px;
+width: 47%;
+height: 40vh;
+border-radius: 10px;
+display: flex;
+justify-content:space-evenly;
+
+}.input_nome_user,.input_emai_user,.input_senha_user,.input_data_nascimento_user{
+height: 40px;
+width: 250px;
+border: 2px solid #00002D;
+border-radius: 10px;
+background-color: #00002d54;
+font-size: 20px;
+color: rgb(0, 0, 0);
+padding-left: 5px;
+
+}.div_inputs_user{
+    display: flex;
+    flex-direction: column;  
+margin-top: 20px;
+font-size: 20px;
+font-family:Poppins-Regular ;
+}.container_button_edit_info_user{
+
+align-items: center;
+margin-top: 100px;
+display:flex;
+flex-direction: column;
+}.bottao_edit_user{
+background-image: url(./images/button_edita_info_user.svg);
+background-repeat: no-repeat;
+width: 56px;
+height: 56px;
+border-radius: 10px;
+border: none;
+
+}.titulo_edit_dados{
+    font-family:Poppins-Regular ;
+font-size: 20px;
+
+}.button_excluir_conta{
+margin-top: 10px;
+margin-left: 100px;
+width:190px ;
+height:40px ;
+background-image:url(./images/icon_excluir_conta.svg) ;
+background-repeat: no-repeat;
+background-size: 35px;
+border: solid 2px red;
+background-color: white;
+color: black;
+border-radius: 7px;
+font-size: 17px;
+font-family:Poppins-Regular ;
+
+}.button_excluir_conta.inativo:hover{
+    margin-top: 10px;
+    margin-left: 100px;
+    width:190px ;
+    height:40px ;
+    background-image:url(./images/icon_excluir_conta_white.svg) ;
+    background-repeat: no-repeat;
+    background-size: 35px;
+    border: solid 2px red;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    border-radius: 7px;
+    font-size: 17px;
+    font-family:Poppins-Regular ;
+    transition: 600ms;
+    
+    }.button_excluir_conta.ativo{
+        margin-top: 10px;
+        margin-left: 100px;
+        width:190px ;
+        height:40px ;
+        background-image:url(./images/icon_excluir_conta_white.svg) ;
+        background-repeat: no-repeat;
+        background-size: 35px;
+        border: solid 2px red;
+        background-color: rgb(255, 0, 0);
+        color: white;
+        border-radius: 7px;
+        font-size: 17px;
+        font-family:Poppins-Regular ;
+
+    }.dialog_excluir_conta{
+
+        border: none;
+        border-radius: 10px;
+        width: 30%;
+        height: 15%;
+        position: fixed; /* Garante que ele fique fora do fluxo normal */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Centraliza o diálogo */
+        background-color: #00002f;
+        padding: 20px;
+border: solid white 2px;
+   color: white;
+   font-family:Poppins-Regular ;
+}.div_container_certeza_exlui-conta{
+
+
+width: 100%;
+height: 100%;
+    }.container_bottao_exclui_conta{
+display: flex;
+justify-content: flex-end;
+
+    }.botton_cancela_excluzao{
+width:150px ;
+height: 40px;
+background-color: rgb(2, 95, 30);
+    border: white 1px solid;
+border-radius: 5px;
+color: aliceblue;
+font-family:Poppins-Regular ;
+}.container_bottao_excluir_conta_definitivo{
+display: flex;
+justify-content: space-evenly;
+
+margin-top: 40px;
+}
+
+
+
+.bottao_excluir_conta_definitivo{
+width: 160px;
+height: 40px;
+background-color: red;
+border: none;
+font-family:Poppins-Regular ;
+color: white;
+border-radius: 6px;
+background-image:url(./images/icon_lixeira_excluir.svg);
+background-repeat: no-repeat;
+background-position: -3px;
+background-size: 30px;
+}.container_titulo{
+
+display: flex;
+justify-content: center;
+
+}
+.modalUsuarioTrocaInfo{
+    border: none;
+    border-radius: 10px;
+    width: fit-content;
+    box-shadow: 0 0 1em rgb(255,255,255);
+    position: fixed; /* Garante que ele fique fora do fluxo normal */
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o diálogo */
+    background-color: #00002D;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    
+    font-family: Poppins-SemiBold;
+    color: white;
+
+}
+@font-face {
+    font-family:"Poppins-SemiBold" ;
+    src: url(../fonts/Poppins/Poppins-SemiBold.ttf);
+  }
+  .BackDrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00002d97;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     backdrop-filter: blur(4px); 
+    
+  }
+  .divInpt{
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Espaçamento entre o label e o input */;
+    margin-top: 10%;
+  }
+  .containerNomeNovo,.inptNovaDataNas,.containerNovoEmail,.containersenhaNova{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+ .inptCasdastroNovoNome,.inptCadastroNovoEmail,.inptCadastroNovasenha,.inptCadastroNovaDataNascimento{
+    width: 200Px;
+    height: 30px;
+    margin-left: 10px;
+ }
+ .inptCadastroNovaDataNascimento{
+    margin-right: 100px;
+ }

@@ -1,0 +1,142 @@
+.ContainerCadastro{
+    background-image: url( ../images/backGroud-cadastro.jpg);
+   background-size: cover;
+  background-position: center   ;
+   background-repeat: no-repeat;
+   background-color: #00002f;
+   height: 100vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  
+
+}
+.divCadastro{
+    background-color: #00002f;
+    color: white;
+    font-family: "Poppins-Bold";
+    align-items: center;
+    box-shadow: 0 0 100vh black;
+    border-radius: 20px;
+   
+   
+}
+@font-face {
+    font-family:"Poppins-Bold" ;
+    src: url(../fonts/Poppins/Poppins-Bold.ttf);
+}
+.propostaSite{
+    margin: 20px;
+   
+}
+.diviInputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inptNome,.inptEmail,.inptDataNas,.inptPassword{
+width: 285PX;
+height: 35px;
+border-radius: 15px;
+margin-bottom: 15px;
+font-size: 20px;
+border: 1px solid;
+}
+.inptNome,.inptEmail,.inptDataNas,.inptPassword:hover{
+    outline: 0;
+}
+.h1Cadastro{
+    margin: 20px;
+}
+.butaoCadastro{
+    margin: 40px;
+    width: 239px;
+    height: 45px;
+    font-family: "Poppins-Bold";
+    font-size: 26px;
+    border: 2px solid #8DCFF7;
+    border-radius: 20px;
+    
+}
+.butaoCadastro:hover{
+    background-color: #8DCFF7;
+    transition: 400ms;
+    color: white;
+  
+}
+.inptNome,.inptEmail,.inptDataNas,.inptPassword::placeholder{
+    padding: 10px;
+}
+
+.divCadastro::backdrop{
+    background-color: black 10px;
+}
+.inptPassword{
+   
+        padding: 5px;
+}
+.inptNome,.inptEmail,.inptDataNas,.inptPassword::placeholder{
+    outline: none;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.possuiUmaConta{
+    margin-bottom: 15px;
+}
+.linkLogin{
+    color: #8DCFF7;
+}
+.linkLogin:active{
+    color: green;
+    transition: 400ms;
+}
+.inptRadio{
+height: 20px;
+width: 20px;
+margin-right: 10px;
+}
+.divCustomRadio{
+    align-items: center;
+}
+
+.pNomePequeno{
+    color: #f40000;
+    margin-right: 34%;
+    margin-bottom: 0;
+    
+    
+    
+}
+.divNomeUser,.divUserSenha,.DivEmail,.dataNascimento{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.LblNomeUser,.lblUserEnail.lblSenhaUser,.lblDataUserUser{
+    margin-left: 10px;
+   
+}
+.DialogNomePequenoUser{
+    border: none;
+    border-radius: 10px;
+    width: fit-content;
+    box-shadow: 0 0 1em #ff0000;
+    position: fixed; /* Garante que ele fique fora do fluxo normal */
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o diálogo */
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: 1px solid red;
+}
+.erroNomeMuitoPequeno{
+   font-family:Poppins-bold ;
+}
+

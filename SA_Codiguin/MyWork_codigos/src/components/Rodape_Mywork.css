@@ -1,0 +1,85 @@
+.containerRodape{
+    background-color: #000027;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    border-bottom:white solid 2px ;
+}
+h1{
+    color: white;
+}
+.logoRodape{
+    width: 250px;
+    height: 250px;
+    padding: 0;
+    margin-left: 15%;
+   
+}
+.containerRedesSocias{
+    align-items: center;
+    display: flex;
+}
+.logoGit,.logoFaceBook,.logoTwiter,.logoYoutube{
+width:58px; 
+height: 55px;
+margin-left: 15px;
+margin-right: 15px;
+margin-top: 5px;
+margin-bottom: 20px;
+
+
+}
+.divContorno{
+background-color: #000027;
+height: 20px;
+width: 100%;
+
+
+}
+@font-face {
+    font-family:'Roboto-light' ;
+    src: url('../fonts/Roboto-Light.ttf');
+}
+.nomes{
+    font-family: 'Roboto-Light';
+    color: white;
+    font-size: 25px;
+    margin: 10px;
+}
+.emailAjuda{
+    font-family:'roboto-Light';
+    color: white;
+    font-size: 25px;
+    margin: 10px;
+   
+}
+.IntegrantesDiv{
+align-items: center;
+
+}
+.divEmails{
+    align-items: center;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+  
+}
+.h1Fotter{
+    font-family: 'Roboto-bold';
+
+}
+@font-face {
+    font-family:'Roboto-bold' ;
+    src: url('../fonts/Roboto-Bold.ttf');
+
+}
+.aSobreNos{
+    color: #8CCEF7;
+    font-size: 27px;
+  font-family: roboto-Light;
+}
+.aSobreNos:hover{
+    color: rgb(100, 237, 90);
+    transition: 800ms;
+
+}
