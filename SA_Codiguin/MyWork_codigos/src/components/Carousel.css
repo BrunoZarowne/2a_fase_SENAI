@@ -110,7 +110,7 @@ html, body{
 .inputsUm{
     position: relative;
     left: 10%;
-    top: 50px;
+    top: 80px;
     width: 40%;
     display: flexbox;
     justify-content: space-around;
@@ -129,7 +129,7 @@ html, body{
     width: 50%;
     position: relative;
     left: 50%;
-    bottom: 500px;
+    bottom: 400px;
     color: white;
     button{
         border-radius: 5px;

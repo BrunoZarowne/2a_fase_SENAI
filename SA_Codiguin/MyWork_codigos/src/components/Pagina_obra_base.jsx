@@ -39,7 +39,6 @@ export default Pagina_obra_base
 // const [formState, setFormState] = useState({
 //   id: "",
 //   title: "",
-//   subtitle: "",
 //   author: "",
 //   pages: "",
 //   date: "",

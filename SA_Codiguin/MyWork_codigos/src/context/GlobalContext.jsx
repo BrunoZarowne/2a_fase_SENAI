@@ -21,7 +21,6 @@ const [UserLogado,setUserLogado] =useState( {
 const [formState, setFormState] = useState({
       id: "",
       title: "",
-      subtitle: "",
       author: "",
       pages: "",
       date: "",
