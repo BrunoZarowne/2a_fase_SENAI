@@ -67,7 +67,7 @@ function Carousel() {
     id: '5',
     title: 'Kagura Bachi',
     author: 'Takeru Hokazono',
-    pages: '12',
+    pages: '216',
     date: '21/09/2024',
     summary: 'A história de Kagurabachi acompanha o protagonista Chihiro Rokuhira, um jovem que trabalha ao lado do pai, o lendário ferreiro, Kunishige Rokuhira. Decidido a seguir os caminhos do chefe da família, Chihiro se dedica e treina diariamente para se tornar um grande mestre forjador de katanas.',
     image: 'https://i.imgur.com/pMFB3Fq.png',
@@ -95,7 +95,7 @@ function Carousel() {
     date: '19/02/2007',
     summary: 'The Boys se passa em um universo onde indivíduos superpoderosos são reconhecidos como heróis pelo público em geral e pertencem à poderosa corporação Vought International, que os comercializa e monetiza. Fora de suas personas heroicas, a maioria é arrogante e corrupta.',
     image: 'https://m.media-amazon.com/images/I/818kKwdtJ4L._AC_UF1000,1000_QL80_.jpg',
-    genre: 'Hq'
+    genre: 'HQ'
     },
 
     {
@@ -137,7 +137,7 @@ function Carousel() {
     author: 'Neil Gaiman, Malcom Jones |||',
     pages: '616',
     date: '29/11/1988',
-    summary: 'História. A história é vista do ponto de vista de Sonho, um dos sete perpétuos, a representação antropomórfica do sonho, inicialmente preso por um grupo de humanos que almejava prender sua irmã mais velha Morte para que se tornassem imortais, mas falham e capturam sonho.',
+    summary: 'A história é vista do ponto de vista de Sonho, um dos sete perpétuos, a representação antropomórfica do sonho, inicialmente preso por um grupo de humanos que almejava prender sua irmã mais velha Morte para que se tornassem imortais, mas falham e capturam sonho.',
     image: 'https://rika.vtexassets.com/arquivos/ids/278826/sandman-preludio-1.jpg?v=635877227581230000',
     genre: 'HQ'
     },
@@ -147,7 +147,7 @@ function Carousel() {
     title: 'V de Vingança',
     author: 'Alan Moore',
     pages: '304',
-    date: '52/10/1989',
+    date: '/10/1989',
     summary: 'Uma poderosa e aterradora história sobre perda de liberdade e cidadania em um mundo bem possível, V DE VINGANÇA permanece como uma das maiores obras dos quadrinhos e o trabalho que revelou ao mundo seus criadores, ALAN MOORE e DAVID LLOYD.Encenada em uma Inglaterra de um futuro imaginário que se entregou ao fascismo, esta arrebatadora história captura a natureza sufocante da vida em um estado policial autoritário e a força redentora do espírito humano que se rebela contra essa situação.Obra de surpreendente clareza e inteligência, V DE VINGANÇA traz inigualável profundidade de caracterizações e verossimilhança em um audacioso conto de opressão e resistência.',
     image: 'https://m.media-amazon.com/images/I/71RccWOPFKL._AC_UF1000,1000_QL80_.jpg',
     genre: 'HQ'
