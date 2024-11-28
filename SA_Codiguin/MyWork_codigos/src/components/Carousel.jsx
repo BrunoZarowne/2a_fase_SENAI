@@ -18,6 +18,8 @@ function Carousel() {
 
   const {formState, setFormState} = useContext(GlobalContext)
 
+  const {obrasFavoritadas, setObrasFavoritadas} = useContext(GlobalContext)
+
   const [imagensObrasMangas, setImagensObrasMangas] = useState([
     {
     id: '1', 
@@ -270,6 +272,10 @@ function Carousel() {
 
   }
   
+function adcObraFavoritada(){
+  setObrasFavoritadas({titulo: imagensObrasMangas.title, imagen: imagensObrasMangas.image})
+  console.log(obrasFavoritadas)
+}
  
 
   return (
@@ -286,6 +292,9 @@ function Carousel() {
           <SwiperSlide key={item.id}>
               <img className='imgsMangas' src={item.image}/><br />
             <label>{item.title}</label>
+            <button className='buttonFav'>
+              <img src="./public/images/favorita_vazio.svg"/>
+            </button>
           </SwiperSlide>
         ))}
       </Swiper>

@@ -29,6 +29,11 @@ const [formState, setFormState] = useState({
       genre: ""
     })
 
+const [obrasFavoritadas, setObrasFavoritadas] = useState({
+  titulo: '',
+  imagen: ''
+})
+
 
 
  return(
@@ -45,7 +50,9 @@ const [formState, setFormState] = useState({
     paginaAtiva,
     setPaginaAtiva,
     formState,
-    setFormState
+    setFormState,
+    obrasFavoritadas,
+    setObrasFavoritadas
     }}>
 
 {children}
