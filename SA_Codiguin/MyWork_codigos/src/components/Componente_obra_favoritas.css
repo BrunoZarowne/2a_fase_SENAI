@@ -11,3 +11,27 @@
 
 
 }
+.favoritadas{
+    background-color: #00002D;
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+    --swiper-pagination-bottom: 93%;
+    padding: 5px;
+    .imgFav{
+        padding-top: 30px;
+        width: 150px;
+        height: 300px;
+        position: relative;
+        left: 10px;
+    }
+    .txtFav{
+        width: 100px;
+        height: 100px;
+        border: 2px bluee solid;
+        color: white;
+        font-size: 20px;
+        padding-left: 10px;
+    }
+    
+}

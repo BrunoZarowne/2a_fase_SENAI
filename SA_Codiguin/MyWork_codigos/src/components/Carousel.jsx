@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './Carousel.css'
 import { register } from 'swiper/element/bundle'
 import Modal from 'react-modal'
@@ -17,8 +17,6 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 function Carousel() { 
 
   const {formState, setFormState} = useContext(GlobalContext)
-
-  const {obrasFavoritadas, setObrasFavoritadas} = useContext(GlobalContext)
 
   const [imagensObrasMangas, setImagensObrasMangas] = useState([
     {
@@ -237,8 +235,7 @@ function Carousel() {
   function adcImagens() {
     abrirModal()
     
-  }
-
+  } 
 
 
   function guardar_infos_postagem() {
@@ -271,12 +268,62 @@ function Carousel() {
 
 
   }
-  
-function adcObraFavoritada(){
-  setObrasFavoritadas({titulo: imagensObrasMangas.title, imagen: imagensObrasMangas.image})
-  console.log(obrasFavoritadas)
-}
- 
+
+  const {obrasFavoritadas, setObrasFavoritadas} = useContext(GlobalContext)
+
+
+  const [IDSelecionado, setIDSelecionado] = useState(null)
+
+  const adcObraFavoritadaManga = (id) => {
+    setIDSelecionado(id)
+
+    const result = imagensObrasMangas.find((manga) => manga.id === IDSelecionado)
+
+    if (result) {
+      setObrasFavoritadas((prevState) => [
+        ...prevState,
+        {titulo: result.title, img: result.image}
+      ])
+    }
+    console.log(obrasFavoritadas)
+  }
+  useEffect(() => {
+    console.log(obrasFavoritadas);
+  }, [obrasFavoritadas])
+
+  const adcObraFavoritadaHQ = (id) => {
+    setIDSelecionado(id)
+
+    const result = imagensObrasHQs.find((manga) => manga.id === IDSelecionado)
+
+    if (result) {
+      setObrasFavoritadas((prevState) => [
+        ...prevState,
+        {titulo: result.title, img: result.image}
+      ])
+    }
+    console.log(obrasFavoritadas)
+  }
+  useEffect(() => {
+    console.log(obrasFavoritadas);
+  }, [obrasFavoritadas])
+
+  const adcObraFavoritadaLivro = (id) => {
+    setIDSelecionado(id)
+
+    const result = livros.find((manga) => manga.id === IDSelecionado)
+
+    if (result) {
+      setObrasFavoritadas((prevState) => [
+        ...prevState,
+        {titulo: result.title, img: result.image}
+      ])
+    }
+    console.log(obrasFavoritadas)
+  }
+  useEffect(() => {
+    console.log(obrasFavoritadas);
+  }, [obrasFavoritadas])  
 
   return (
     <div className='containerCarousel'>
@@ -292,7 +339,7 @@ function adcObraFavoritada(){
           <SwiperSlide key={item.id}>
               <img className='imgsMangas' src={item.image}/><br />
             <label>{item.title}</label>
-            <button className='buttonFav'>
+            <button className='buttonFav' onClick={() => adcObraFavoritadaManga(item.id)}>
               <img src="./public/images/favorita_vazio.svg"/>
             </button>
           </SwiperSlide>
@@ -311,6 +358,9 @@ function adcObraFavoritada(){
             <img className='imgsHQs' src={item.image}/>
           </a><br />
           <label>{item.title}</label>
+          <button className='buttonFav' onClick={() => adcObraFavoritadaHQ(item.id)}>
+            <img src="./public/images/favorita_vazio.svg"/>
+          </button>
         </SwiperSlide>
       ))}
      </Swiper>
@@ -325,6 +375,9 @@ function adcObraFavoritada(){
           <SwiperSlide key={item.id}>
               <img className='imgsLivros' src={item.image}/><br />
             <label>{item.title}</label>
+            <button className='buttonFav' onClick={() => adcObraFavoritadaLivro(item.id)}>
+            <img src="./public/images/favorita_vazio.svg"/>
+          </button>
           </SwiperSlide>
         ))}
       </Swiper>

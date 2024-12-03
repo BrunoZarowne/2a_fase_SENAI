@@ -29,10 +29,7 @@ const [formState, setFormState] = useState({
       genre: ""
     })
 
-const [obrasFavoritadas, setObrasFavoritadas] = useState({
-  titulo: '',
-  imagen: ''
-})
+const [obrasFavoritadas, setObrasFavoritadas] = useState([])
 
 
 
