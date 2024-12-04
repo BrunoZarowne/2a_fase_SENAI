@@ -82,7 +82,7 @@ function Carousel() {
     pages: '192',
     date: '20/10/1999',
     summary: 'A série foca em Monkey D. Luffy, um jovem que se tornou usuário de Akuma no Mi acidentalmente quando era criança. Ele comeu a Akuma no Mi conhecida como Gomu Gomu no Mi, ou Fruta da Borracha, que estava sob posse da tripulação do poderoso pirata Shanks, o Ruivo, o ídolo de infância de Luffy.',
-    image: 'https://comichub.blob.core.windows.net/high/80cfb218-634d-4001-9df0-f7fa0347ac90.jpg',
+    image: 'https://johto.legiaodosherois.com.br/wp-content/uploads/2021/08/legiao_4YmvHICdo9Zu.jpg',
     genre: 'Manga'
     },
   ])
