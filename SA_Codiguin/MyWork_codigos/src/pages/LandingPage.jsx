@@ -21,7 +21,7 @@ console.log(vetorUsuarios)
             <p className='pInfoSite'>seja bem vindo ao nosso mundo <br />literario onde cada pagina e uma nova <br /> aventura esperando para ser  descoberta</p>
             </div>
             <div className='divButaos'>
-                <button className='butaoUm'>Dowload</button> <button className='butaoDois'><Link to={"/cadastro"} className='linkCadastro'>Sing</Link></button>
+                <button className='butaoUm'>Download</button> <button className='butaoDois'><Link to={"/cadastro"} className='linkCadastro'>Sign in</Link></button>
             </div>
         </div>
     

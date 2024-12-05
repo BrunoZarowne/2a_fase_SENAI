@@ -274,11 +274,13 @@ function Carousel() {
 
   const [IDSelecionado, setIDSelecionado] = useState(null)
 
-  const adcObraFavoritadaManga = (id) => {
+// mangas //
+  
+  function adcObraFavoritadaManga(id) {
     setIDSelecionado(id)
-
+    
     const result = imagensObrasMangas.find((manga) => manga.id === IDSelecionado)
-
+    
     if (result) {
       setObrasFavoritadas((prevState) => [
         ...prevState,
@@ -290,11 +292,25 @@ function Carousel() {
   useEffect(() => {
     console.log(obrasFavoritadas);
   }, [obrasFavoritadas])
-
-  const adcObraFavoritadaHQ = (id) => {
+  
+  function adcHistManga(id){
     setIDSelecionado(id)
 
-    const result = imagensObrasHQs.find((manga) => manga.id === IDSelecionado)
+    const historiManga = imagensObrasMangas.find((histManga) => histManga.id === IDSelecionado)
+
+    if (historiManga) {
+      obrasVisitadas.push(historiManga.title)
+    }
+  }
+
+// mangas //
+
+// HQ //
+
+  function adcObraFavoritadaHQ(id) {
+    setIDSelecionado(id)
+
+    const result = imagensObrasHQs.find((HQs) => HQs.id === IDSelecionado)
 
     if (result) {
       setObrasFavoritadas((prevState) => [
@@ -308,7 +324,21 @@ function Carousel() {
     console.log(obrasFavoritadas);
   }, [obrasFavoritadas])
 
-  const adcObraFavoritadaLivro = (id) => {
+  function adcHistHQ(id){
+    setIDSelecionado(id)
+
+    const historiHQ = imagensObrasHQs.find((histHQ) => histHQ.id === IDSelecionado)
+
+    if (historiHQ) {
+      obrasVisitadas.push(historiHQ.title)
+    }
+  }
+
+// HQ //
+
+// Livro //
+
+  function adcObraFavoritadaLivro(id) {
     setIDSelecionado(id)
 
     const result = livros.find((manga) => manga.id === IDSelecionado)
@@ -323,12 +353,17 @@ function Carousel() {
   }
   useEffect(() => {
     console.log(obrasFavoritadas);
-  }, [obrasFavoritadas])  
+  }, [obrasFavoritadas])
+
+// Livro //
+
+
+  const {obrasVisitadas} = useContext(GlobalContext)
+
 
   return (
     <div className='containerCarousel'>
-      <button className='buttonCarousel' onClick={adcImagens}>Postar</button>
-      
+      <button className='buttonCarousel' onClick={adcImagens}>Postar</button>      
     <div className='carouselMangas'>
       <Swiper
         slidesPerView={5}
@@ -337,7 +372,9 @@ function Carousel() {
       >
         {imagensObrasMangas.map((item) => (
           <SwiperSlide key={item.id}>
-              <img className='imgsMangas' src={item.image}/><br />
+            <button onClick={() => adcHistManga(item.id)}>
+              <img className='imgsMangas' src={item.image}/>
+            </button><br />
             <label>{item.title}</label>
             <button className='buttonFav' onClick={() => adcObraFavoritadaManga(item.id)}>
               <img src="./public/images/favorita_vazio.svg"/>
@@ -354,9 +391,9 @@ function Carousel() {
      >
       {imagensObrasHQs.map((item) => (
         <SwiperSlide key={item.id}>
-          <a href={item.a}>
+          <button onClick={adcHistHQ}>
             <img className='imgsHQs' src={item.image}/>
-          </a><br />
+          </button><br />
           <label>{item.title}</label>
           <button className='buttonFav' onClick={() => adcObraFavoritadaHQ(item.id)}>
             <img src="./public/images/favorita_vazio.svg"/>

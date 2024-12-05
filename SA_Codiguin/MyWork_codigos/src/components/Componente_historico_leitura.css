@@ -5,8 +5,16 @@
     width: 47%;
     height: 40vh;
     border-radius: 10px;
-    display: flex;
-    justify-content:space-evenly;
-
-
+}
+.historicoVisitas{
+    border: 2px red solid;
+    width: 150px;
+    height: fit-content;
+    position: relative;
+    left: 2%;
+    top: 5%;
+    list-style-type: none;
+}
+.a{
+    border: 2px green solid;
 }
