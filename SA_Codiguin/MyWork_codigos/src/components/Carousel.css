@@ -24,13 +24,18 @@ html, body{
         font-size: 25px;
         font-family: "Poppins-Bold";
     }
-    .imgsMangas{
-        width: 250px;
-        height: 350px;
-        position: relative;
-        padding-top: 25px;
-        left: 45px;
+    .buttonMangas{
+        border: none;
+        background-color: #0C0C3E;
+        .imgsMangas{
+            width: 250px;
+            height: 350px;
+            position: relative;
+            padding-top: 25px;
+            left: 45px;
+        }
     }
+    
 }
 
 .carouselHQs{
@@ -50,13 +55,18 @@ html, body{
         font-size: 25px;
         font-family: "Poppins-Bold";
     }
-    .imgsHQs{
-        width: 250px;
-        height: 350px;
-        position: relative;
-        left: 45px;
-        padding-top: 25px;
+    .buttonHQs{
+        background-color: #0C0C3E;
+        border: none;
+        .imgsHQs{
+            width: 250px;
+            height: 350px;
+            position: relative;
+            left: 45px;
+            padding-top: 25px;
+        }
     }
+    
 }
 
 .carouselLivros{

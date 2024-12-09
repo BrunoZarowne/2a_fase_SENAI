@@ -6,15 +6,10 @@
     height: 40vh;
     border-radius: 10px;
 }
-.historicoVisitas{
+.histObras{
     border: 2px red solid;
-    width: 150px;
-    height: fit-content;
+    width: fit-content;
     position: relative;
-    left: 2%;
-    top: 5%;
+    left: 30px;
     list-style-type: none;
-}
-.a{
-    border: 2px green solid;
 }

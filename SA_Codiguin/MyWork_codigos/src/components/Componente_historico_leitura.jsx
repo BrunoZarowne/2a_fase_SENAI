@@ -12,9 +12,13 @@ function Componente_historico_leitura() {
 
   return (
     <div className='container_historico_de_leitura'>
-     <ul className='historicoVisitas'>
-      {obrasVisitadas.map ( (number) => <li key={number.toString()} className='a'>{number}</li>)}
-     </ul>
+      <ul>
+        {obrasVisitadas.map((item) => (
+          <li className='histObras' key={item.id}>
+            <label>{item.title}</label>
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }

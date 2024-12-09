@@ -271,94 +271,40 @@ function Carousel() {
 
   const {obrasFavoritadas, setObrasFavoritadas} = useContext(GlobalContext)
 
+  const {obrasVisitadas, setObrasVisitadas} = useContext(GlobalContext)
 
-  const [IDSelecionado, setIDSelecionado] = useState(null)
 
 // mangas //
   
-  function adcObraFavoritadaManga(id) {
-    setIDSelecionado(id)
+  function adcObrasFav(event){ 
+    const id = event.currentTarget.getAttribute('data-id');
+    const title = event.currentTarget.getAttribute('data-title');
+    const image = event.currentTarget.getAttribute('data-image');
     
-    const result = imagensObrasMangas.find((manga) => manga.id === IDSelecionado)
-    
-    if (result) {
-      setObrasFavoritadas((prevState) => [
-        ...prevState,
-        {titulo: result.title, img: result.image}
-      ])
-    }
+    setObrasFavoritadas((fav) =>
+    [...obrasFavoritadas, {id: id, title: title, img: image}])
     console.log(obrasFavoritadas)
   }
-  useEffect(() => {
-    console.log(obrasFavoritadas);
-  }, [obrasFavoritadas])
-  
-  function adcHistManga(id){
-    setIDSelecionado(id)
 
-    const historiManga = imagensObrasMangas.find((histManga) => histManga.id === IDSelecionado)
-
-    if (historiManga) {
-      obrasVisitadas.push(historiManga.title)
-    }
+  function adcObrasHist(event){
+    const idHist = event.currentTarget.getAttribute('data-idhist');
+    const titleHist = event.currentTarget.getAttribute('data-titlehist');
+    
+    setObrasVisitadas(
+      [...obrasVisitadas, {id: idHist, title: titleHist}])
+    console.log(obrasVisitadas)
   }
-
 // mangas //
 
 // HQ //
 
-  function adcObraFavoritadaHQ(id) {
-    setIDSelecionado(id)
-
-    const result = imagensObrasHQs.find((HQs) => HQs.id === IDSelecionado)
-
-    if (result) {
-      setObrasFavoritadas((prevState) => [
-        ...prevState,
-        {titulo: result.title, img: result.image}
-      ])
-    }
-    console.log(obrasFavoritadas)
-  }
-  useEffect(() => {
-    console.log(obrasFavoritadas);
-  }, [obrasFavoritadas])
-
-  function adcHistHQ(id){
-    setIDSelecionado(id)
-
-    const historiHQ = imagensObrasHQs.find((histHQ) => histHQ.id === IDSelecionado)
-
-    if (historiHQ) {
-      obrasVisitadas.push(historiHQ.title)
-    }
-  }
-
+ 
 // HQ //
 
 // Livro //
 
-  function adcObraFavoritadaLivro(id) {
-    setIDSelecionado(id)
-
-    const result = livros.find((manga) => manga.id === IDSelecionado)
-
-    if (result) {
-      setObrasFavoritadas((prevState) => [
-        ...prevState,
-        {titulo: result.title, img: result.image}
-      ])
-    }
-    console.log(obrasFavoritadas)
-  }
-  useEffect(() => {
-    console.log(obrasFavoritadas);
-  }, [obrasFavoritadas])
-
+  
 // Livro //
-
-
-  const {obrasVisitadas} = useContext(GlobalContext)
 
 
   return (
@@ -372,11 +318,18 @@ function Carousel() {
       >
         {imagensObrasMangas.map((item) => (
           <SwiperSlide key={item.id}>
-            <button onClick={() => adcHistManga(item.id)}>
+            <button className='buttonMangas'
+            data-idhist={item.id}
+            data-titlehist={item.title}
+            onClick={adcObrasHist}>
               <img className='imgsMangas' src={item.image}/>
             </button><br />
             <label>{item.title}</label>
-            <button className='buttonFav' onClick={() => adcObraFavoritadaManga(item.id)}>
+            <button className='buttonFav'
+            data-id={item.id}
+            data-title={item.title}
+            data-image={item.image}
+            onClick={adcObrasFav}>
               <img src="./public/images/favorita_vazio.svg"/>
             </button>
           </SwiperSlide>
@@ -391,11 +344,11 @@ function Carousel() {
      >
       {imagensObrasHQs.map((item) => (
         <SwiperSlide key={item.id}>
-          <button onClick={adcHistHQ}>
+          <button className='buttonHQs' >
             <img className='imgsHQs' src={item.image}/>
           </button><br />
           <label>{item.title}</label>
-          <button className='buttonFav' onClick={() => adcObraFavoritadaHQ(item.id)}>
+          <button className='buttonFav' >
             <img src="./public/images/favorita_vazio.svg"/>
           </button>
         </SwiperSlide>
@@ -412,7 +365,7 @@ function Carousel() {
           <SwiperSlide key={item.id}>
               <img className='imgsLivros' src={item.image}/><br />
             <label>{item.title}</label>
-            <button className='buttonFav' onClick={() => adcObraFavoritadaLivro(item.id)}>
+            <button className='buttonFav' >
             <img src="./public/images/favorita_vazio.svg"/>
           </button>
           </SwiperSlide>
@@ -429,7 +382,9 @@ function Carousel() {
       
         
         <div className='infosObra'>
-        <button className='buttonFecharModal' onClick={fecharModal}><img src="./images/fechar_modal.svg"/></button>
+        <button className='buttonFecharModal' onClick={fecharModal}>
+          <img src="./images/fechar_modal.svg"/>
+        </button>
           <div className='inputsUm'>
             <label>Link da sua imagen</label><br />
             <input 
@@ -526,4 +481,93 @@ const [formState, setFormState] = useState({
 
     formState,
     setFormState
+*/
+
+
+
+/*
+
+// manga//
+
+function adcObraFavoritadaManga(id) {
+    setIDSelecionado(id)
+    
+    const result = imagensObrasMangas.find((manga) => manga.id === IDSelecionado)
+    
+    if (result) {
+      setObrasFavoritadas((prevState) => [
+        ...prevState,
+        {titulo: result.title, img: result.image}
+      ])
+    }
+    console.log(obrasFavoritadas)
+  }
+  useEffect(() => {
+    console.log(obrasFavoritadas);
+  }, [obrasFavoritadas])
+  
+  function adcHistManga(id){
+    setIDSelecionado(id)
+
+    const historiManga = imagensObrasMangas.find((histManga) => histManga.id === IDSelecionado)
+
+    if (historiManga) {
+      obrasVisitadas.push(historiManga.title)
+    }
+  }
+
+// manga //
+
+// hq //
+
+  function adcObraFavoritadaHQ(id) {
+    setIDSelecionado(id)
+
+    const result = imagensObrasHQs.find((HQs) => HQs.id === IDSelecionado)
+
+    if (result) {
+      setObrasFavoritadas((prevState) => [
+        ...prevState,
+        {titulo: result.title, img: result.image}
+      ])
+    }
+    console.log(obrasFavoritadas)
+  }
+  useEffect(() => {
+    console.log(obrasFavoritadas);
+  }, [obrasFavoritadas])
+
+  function adcHistHQ(id){
+    setIDSelecionado(id)
+
+    const historiHQ = imagensObrasHQs.find((histHQ) => histHQ.id === IDSelecionado)
+
+    if (historiHQ) {
+      obrasVisitadas.push(historiHQ.title)
+    }
+  }
+
+// hq //
+
+// livro //
+
+function adcObraFavoritadaLivro(id) {
+    setIDSelecionado(id)
+
+    const result = livros.find((manga) => manga.id === IDSelecionado)
+
+    if (result) {
+      setObrasFavoritadas((prevState) => [
+        ...prevState,
+        {titulo: result.title, img: result.image}
+      ])
+    }
+    console.log(obrasFavoritadas)
+  }
+  useEffect(() => {
+    console.log(obrasFavoritadas);
+  }, [obrasFavoritadas])
+
+// livro //
+
 */

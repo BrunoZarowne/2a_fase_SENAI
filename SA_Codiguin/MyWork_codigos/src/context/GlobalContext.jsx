@@ -31,7 +31,7 @@ const [formState, setFormState] = useState({
 
 const [obrasFavoritadas, setObrasFavoritadas] = useState([])
 
-const obrasVisitadas = []
+const [obrasVisitadas, setObrasVisitadas] = useState([])
 
 
 
@@ -52,7 +52,8 @@ const obrasVisitadas = []
     setFormState,
     obrasFavoritadas,
     setObrasFavoritadas,
-    obrasVisitadas
+    obrasVisitadas,
+    setObrasVisitadas
     }}>
 
 {children}
