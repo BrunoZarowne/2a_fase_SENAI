@@ -2,7 +2,6 @@ import React from 'react'
 import { useContext } from 'react'
 import './Componente_historico_leitura.css'
 import { GlobalContext } from '../context/GlobalContext'
-import { Link } from 'react-router-dom'
 
 
 function Componente_historico_leitura() {
@@ -15,7 +14,8 @@ function Componente_historico_leitura() {
       <ul>
         {obrasVisitadas.map((item) => (
           <li className='histObras' key={item.id}>
-            <label>{item.title}</label>
+            <label className='lblUm'>{item.title}</label>
+            <label className='lblDois'>{item.time}</label>
           </li>
         ))}
       </ul>

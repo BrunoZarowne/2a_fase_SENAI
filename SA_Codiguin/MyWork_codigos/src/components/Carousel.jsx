@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import './Carousel.css'
 import { register } from 'swiper/element/bundle'
 import Modal from 'react-modal'
@@ -276,36 +276,86 @@ function Carousel() {
 
 // mangas //
   
-  function adcObrasFav(event){ 
-    const id = event.currentTarget.getAttribute('data-id');
-    const title = event.currentTarget.getAttribute('data-title');
-    const image = event.currentTarget.getAttribute('data-image');
+  function adcObrasFavManga(event){ 
+    const idManga = event.currentTarget.getAttribute('data-idmanga');
+    const titleManga = event.currentTarget.getAttribute('data-titlemanga');
+    const imageManga = event.currentTarget.getAttribute('data-imagemanga');
     
     setObrasFavoritadas((fav) =>
-    [...obrasFavoritadas, {id: id, title: title, img: image}])
+    [...obrasFavoritadas, {id: idManga, title: titleManga, img: imageManga}])
     console.log(obrasFavoritadas)
   }
 
-  function adcObrasHist(event){
-    const idHist = event.currentTarget.getAttribute('data-idhist');
-    const titleHist = event.currentTarget.getAttribute('data-titlehist');
+  function adcObrasHistManga(event){
+    const idMangaHist = event.currentTarget.getAttribute('data-idhistmanga');
+    const titleMangaHist = event.currentTarget.getAttribute('data-titlehistmanga');
+
+    const dataAtual = new Date()
+    const dataHoras = dataAtual.getHours()
+    const dataMinutos = dataAtual.getMinutes()
+    const dataShow = dataHoras.toString() + ':' + dataMinutos.toString()
     
     setObrasVisitadas(
-      [...obrasVisitadas, {id: idHist, title: titleHist}])
+      [...obrasVisitadas, {id: idMangaHist, title: titleMangaHist, time: dataShow}])
     console.log(obrasVisitadas)
   }
 // mangas //
 
 // HQ //
 
+function adcObrasFavHQs(event){
+  const idHQ = event.currentTarget.getAttribute('data-idhq')
+  const titleHQ = event.currentTarget.getAttribute('data-titlehq')
+  const imageHQ = event.currentTarget.getAttribute('data-imagehq')
+
+  setObrasFavoritadas((fav) =>
+    [...obrasFavoritadas, {id: idHQ, title: titleHQ, img: imageHQ}])
+    console.log(obrasFavoritadas)
+}
+
+function adcObrasHistHQs(event){
+  const idHQHist = event.currentTarget.getAttribute('data-idhisthq')
+  const titleHQHist = event.currentTarget.getAttribute('data-titlehisthq')
+
+  const dataAtual = new Date()
+  const dataHoras = dataAtual.getHours()
+  const dataMinutos = dataAtual.getMinutes()
+  const dataShow = dataHoras.toString() + ':' + dataMinutos.toString()
+
+  setObrasVisitadas(
+    [...obrasVisitadas, {id: idHQHist, title: titleHQHist, time: dataShow}])
+  console.log(obrasVisitadas)
+}
  
 // HQ //
 
 // Livro //
 
+function adcObrasFavLivros(event){
+  const idLivro = event.currentTarget.getAttribute('data-idlivro')
+  const titleLivro = event.currentTarget.getAttribute('data-titlelivro')
+  const imageLivro = event.currentTarget.getAttribute('data-imagelivro')
+
+  setObrasFavoritadas((fav) =>
+    [...obrasFavoritadas, {id: idLivro, title: titleLivro, img: imageLivro}])
+    console.log(obrasFavoritadas)
+}
+
+function adcObrasHistlivro(event){
+  const idLivroHist = event.currentTarget.getAttribute('data-idhistlivro')
+  const titleLivroHist = event.currentTarget.getAttribute('data-titlehistlivro')
+
+  const dataAtual = new Date()
+  const dataHoras = dataAtual.getHours()
+  const dataMinutos = dataAtual.getMinutes()
+  const dataShow = dataHoras.toString() + ':' + dataMinutos.toString()
+
+  setObrasVisitadas(
+    [...obrasVisitadas, {id: idLivroHist, title: titleLivroHist, time: dataShow}])
+  console.log(obrasVisitadas)
+}
   
 // Livro //
-
 
   return (
     <div className='containerCarousel'>
@@ -319,17 +369,17 @@ function Carousel() {
         {imagensObrasMangas.map((item) => (
           <SwiperSlide key={item.id}>
             <button className='buttonMangas'
-            data-idhist={item.id}
-            data-titlehist={item.title}
-            onClick={adcObrasHist}>
+            data-idhistmanga={item.id}
+            data-titlehistmanga={item.title}
+            onClick={adcObrasHistManga}>
               <img className='imgsMangas' src={item.image}/>
             </button><br />
             <label>{item.title}</label>
             <button className='buttonFav'
-            data-id={item.id}
-            data-title={item.title}
-            data-image={item.image}
-            onClick={adcObrasFav}>
+            data-idmanga={item.id}
+            data-titlemanga={item.title}
+            data-imagemanga={item.image}
+            onClick={adcObrasFavManga}>
               <img src="./public/images/favorita_vazio.svg"/>
             </button>
           </SwiperSlide>
@@ -344,11 +394,18 @@ function Carousel() {
      >
       {imagensObrasHQs.map((item) => (
         <SwiperSlide key={item.id}>
-          <button className='buttonHQs' >
+          <button className='buttonHQs'
+          data-idhisthq={item.id}
+          data-titlehisthq={item.title}
+          onClick={adcObrasHistHQs}>
             <img className='imgsHQs' src={item.image}/>
           </button><br />
           <label>{item.title}</label>
-          <button className='buttonFav' >
+          <button className='buttonFav'
+          data-idhq={item.id}
+          data-titlehq={item.title}
+          data-imagehq={item.image}
+          onClick={adcObrasFavHQs}>
             <img src="./public/images/favorita_vazio.svg"/>
           </button>
         </SwiperSlide>
@@ -363,9 +420,18 @@ function Carousel() {
       >
         {livros.map((item) => (
           <SwiperSlide key={item.id}>
-              <img className='imgsLivros' src={item.image}/><br />
+            <button className='buttonLivros'
+            data-idhistlivro={item.id}
+            data-titlehistlivro={item.title}
+            onClick={adcObrasHistlivro}>
+              <img className='imgsLivros' src={item.image}/>
+            </button><br />
             <label>{item.title}</label>
-            <button className='buttonFav' >
+            <button className='buttonFav'
+            data-idlivro={item.id}
+            data-titlelivro={item.title}
+            data-imagelivro={item.image}
+            onClick={adcObrasFavLivros}>
             <img src="./public/images/favorita_vazio.svg"/>
           </button>
           </SwiperSlide>
@@ -466,108 +532,3 @@ export default Carousel
 // qnd for usar dar usar esse comando
 // npm i swiper
 // npm i react-modal
-
-/*
-const [formState, setFormState] = useState({
-      id: "",
-      title: "",
-      author: "",
-      pages: "",
-      date: "",
-      summary: "",
-      images: "",
-      genre: ""
-    })
-
-    formState,
-    setFormState
-*/
-
-
-
-/*
-
-// manga//
-
-function adcObraFavoritadaManga(id) {
-    setIDSelecionado(id)
-    
-    const result = imagensObrasMangas.find((manga) => manga.id === IDSelecionado)
-    
-    if (result) {
-      setObrasFavoritadas((prevState) => [
-        ...prevState,
-        {titulo: result.title, img: result.image}
-      ])
-    }
-    console.log(obrasFavoritadas)
-  }
-  useEffect(() => {
-    console.log(obrasFavoritadas);
-  }, [obrasFavoritadas])
-  
-  function adcHistManga(id){
-    setIDSelecionado(id)
-
-    const historiManga = imagensObrasMangas.find((histManga) => histManga.id === IDSelecionado)
-
-    if (historiManga) {
-      obrasVisitadas.push(historiManga.title)
-    }
-  }
-
-// manga //
-
-// hq //
-
-  function adcObraFavoritadaHQ(id) {
-    setIDSelecionado(id)
-
-    const result = imagensObrasHQs.find((HQs) => HQs.id === IDSelecionado)
-
-    if (result) {
-      setObrasFavoritadas((prevState) => [
-        ...prevState,
-        {titulo: result.title, img: result.image}
-      ])
-    }
-    console.log(obrasFavoritadas)
-  }
-  useEffect(() => {
-    console.log(obrasFavoritadas);
-  }, [obrasFavoritadas])
-
-  function adcHistHQ(id){
-    setIDSelecionado(id)
-
-    const historiHQ = imagensObrasHQs.find((histHQ) => histHQ.id === IDSelecionado)
-
-    if (historiHQ) {
-      obrasVisitadas.push(historiHQ.title)
-    }
-  }
-
-// hq //
-
-// livro //
-
-function adcObraFavoritadaLivro(id) {
-    setIDSelecionado(id)
-
-    const result = livros.find((manga) => manga.id === IDSelecionado)
-
-    if (result) {
-      setObrasFavoritadas((prevState) => [
-        ...prevState,
-        {titulo: result.title, img: result.image}
-      ])
-    }
-    console.log(obrasFavoritadas)
-  }
-  useEffect(() => {
-    console.log(obrasFavoritadas);
-  }, [obrasFavoritadas])
-
-// livro //
-
-*/

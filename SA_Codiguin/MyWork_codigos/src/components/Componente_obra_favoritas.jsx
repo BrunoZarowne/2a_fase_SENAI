@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import "./Componente_obra_favoritas.css"
 import { GlobalContext } from '../context/GlobalContext'
 import { register } from 'swiper/element/bundle'
@@ -15,7 +15,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 function Componente_obra_favoritas() {
 
-  const {obrasFavoritadas, setObrasFavoritadas} = useContext(GlobalContext)
+  const {obrasFavoritadas} = useContext(GlobalContext)
 
   return (
     <div className='container_obras_favoritas'>

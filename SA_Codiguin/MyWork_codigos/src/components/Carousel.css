@@ -86,13 +86,18 @@ html, body{
         font-size: 25px;
         font-family: "Poppins-Bold";
     }
-    .imgsLivros{
-        width: 250px;
-        height: 350px;
-        position: relative;
-        left: 45px;
-        padding-top: 25px;
+    .buttonLivros{
+        background-color: #0C0C3E;
+        border: none;
+        .imgsLivros{
+            width: 250px;
+            height: 350px;
+            position: relative;
+            left: 45px;
+            padding-top: 25px;
+        }
     }
+    
 }
 
 .swiper-button-next{

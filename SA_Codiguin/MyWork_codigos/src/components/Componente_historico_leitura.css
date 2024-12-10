@@ -5,11 +5,29 @@
     width: 47%;
     height: 40vh;
     border-radius: 10px;
+    overflow-y: auto;
 }
+
 .histObras{
-    border: 2px red solid;
-    width: fit-content;
+    border: 2px black solid;
+    border-radius: 5px;
+    height: 20px;
+    width: 80%;
     position: relative;
-    left: 30px;
+    padding: 5px;
+    top: 20px;
+    left: 8%;
     list-style-type: none;
+    margin-bottom: 15px;
+    .lblUm{
+        width: 150px;
+        text-align: center;
+        position: absolute;
+        left: 20%;
+    }
+    .lblDois{
+        position: absolute;
+        left: 70%;
+    }
+    
 }
